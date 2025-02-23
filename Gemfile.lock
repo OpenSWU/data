@@ -36,6 +36,9 @@ GEM
     rspec-expectations (3.13.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
+    rspec-its (2.0.0)
+      rspec-core (>= 3.13.0)
+      rspec-expectations (>= 3.13.0)
     rspec-mocks (3.13.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
@@ -81,6 +84,7 @@ DEPENDENCIES
   faraday (~> 2.12)
   oj (~> 3.16)
   rspec (~> 3.13)
+  rspec-its (~> 2.0)
   standard (~> 1.45)
 
 RUBY VERSION
