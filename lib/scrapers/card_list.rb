@@ -9,7 +9,11 @@ module Scrapers
 
     def scrape
       response = @connection.get(path, default_params)
-      Oj.load(response.body)
+      Enumerator.new do |yielder|
+        Oj.load(response.body)["data"].each do |card_detail|
+          yielder << card_detail
+        end
+      end
     end
 
     private
