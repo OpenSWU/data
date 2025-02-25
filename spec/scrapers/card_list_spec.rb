@@ -1,4 +1,6 @@
 require "spec_helper"
+require "fileutils"
+require "tmpdir"
 require "scrapers/card_list"
 
 RSpec.describe Scrapers::CardList do
@@ -42,6 +44,23 @@ RSpec.describe Scrapers::CardList do
       expect(results).to include(hash_including({"id" => 344, "attributes" => hash_including({"title" => "Colonel Yularen"})}))
 
       stubs.verify_stubbed_calls
+    end
+  end
+
+  describe "#cache_to_disk!" do
+    let!(:temp_folder) { Dir.mktmpdir }
+
+    after do
+      FileUtils.remove_entry(temp_folder)
+    end
+
+    it "creates a cache file for each result" do
+      expect {
+        scraper.scrape!
+        scraper.cache_to_disk!(temp_folder)
+      }.to change {
+        Dir["#{temp_folder}/openswu-data/*.json"].length
+      }.from(0).to(100)
     end
   end
 end

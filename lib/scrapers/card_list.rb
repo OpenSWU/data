@@ -27,6 +27,15 @@ module Scrapers
       end
     end
 
+    def cache_to_disk!(cache_dir = Dir.mktmpdir)
+      Dir.mkdir("#{cache_dir}/openswu-data") unless Dir.exist?("#{cache_dir}/openswu-data")
+
+      results.each do |result|
+        filename = result["attributes"]["cardUid"] || result["attributes"]["cardId"]
+        File.write("#{cache_dir}/openswu-data/#{filename}.json", result.to_json)
+      end
+    end
+
     private
 
     def extract_card_data(data)
