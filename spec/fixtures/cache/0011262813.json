@@ -1,1 +1,604 @@
-{"id":19511,"attributes":{"title":"Wedge Antilles","subtitle":"Leader of Red Squadron","cardNumber":8,"cardCount":257,"artist":"David Buisan","artFrontHorizontal":true,"artBackHorizontal":null,"hasFoil":true,"cost":5,"hp":6,"power":3,"text":"Action [Exhaust]: Play a card from your hand using Piloting. It costs 1 resource less.","textStyled":"<p><strong>Action [</strong><img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_exhaust_0c450d09d4.png\" alt=\"icon_exhaust.png\"><strong>]:</strong> Play a card from your hand using <strong>Piloting</strong>. It costs <img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_cost_1_6878a6fe98.png\" alt=\"icon_cost_1.png\"> less.</p>","deployBox":"","deployBoxStyled":"","epicAction":"Epic Action: If you control 5 or more resources, choose one:\nDeploy this leader.\nDeploy this leader as an upgrade on a friendly Vehicle unit without a Pilot on it.","epicActionStyled":"<p><strong>Epic Action:</strong> If you control 5 or more resources, choose one:</p><ul><li>Deploy this leader.</li><li>Deploy this leader as an upgrade on a friendly <i><strong>Vehicle</strong></i> unit without a <i><strong>Pilot</strong></i> on it.</li></ul>","linkHtml":"<a href=\"/cards?cid=0011262813\" class=\"card-tooltip\" data-card=\"0011262813\">Wedge Antilles</a>","cardId":null,"createdAt":"2024-11-27T04:40:32.964Z","updatedAt":"2025-01-09T16:20:59.428Z","publishedAt":"2025-01-09T16:20:32.542Z","locale":"en","hyperspace":false,"unique":true,"showcase":false,"cardUid":"0011262813","rules":null,"rulesStyled":"","serialCode":"04010008","upgradeHp":4,"upgradePower":3,"artFront":{"data":{"id":24396,"attributes":{"name":"04010008EN_Wedge_Antilles_Leader.png","alternativeText":null,"caption":null,"width":419,"height":300,"formats":{"card":{"ext":".png","url":"https://cdn.starwarsunlimited.com//card_04010008_EN_Wedge_Antilles_Leader_1f73212484.png","hash":"card_04010008_EN_Wedge_Antilles_Leader_1f73212484","mime":"image/png","name":"card_04010008EN_Wedge_Antilles_Leader.png","path":null,"size":207.51,"width":400,"height":286},"xsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484.png","hash":"xsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484","mime":"image/png","name":"xsmall_04010008EN_Wedge_Antilles_Leader.png","path":null,"size":126.8,"width":300,"height":215},"xxsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xxsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484.png","hash":"xxsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484","mime":"image/png","name":"xxsmall_04010008EN_Wedge_Antilles_Leader.png","path":null,"size":62.61,"width":200,"height":143},"xxxsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xxxsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484.png","hash":"xxxsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484","mime":"image/png","name":"xxxsmall_04010008EN_Wedge_Antilles_Leader.png","path":null,"size":37.96,"width":150,"height":107},"thumbnail":{"ext":".png","url":"https://cdn.starwarsunlimited.com//thumbnail_04010008_EN_Wedge_Antilles_Leader_1f73212484.png","hash":"thumbnail_04010008_EN_Wedge_Antilles_Leader_1f73212484","mime":"image/png","name":"thumbnail_04010008EN_Wedge_Antilles_Leader.png","path":null,"size":72.8,"width":218,"height":156}},"hash":"04010008_EN_Wedge_Antilles_Leader_1f73212484","ext":".png","mime":"image/png","size":53.37,"url":"https://cdn.starwarsunlimited.com//04010008_EN_Wedge_Antilles_Leader_1f73212484.png","previewUrl":null,"provider":"aws-s3","provider_metadata":null,"createdAt":"2024-11-26T20:10:47.787Z","updatedAt":"2024-11-26T20:10:47.787Z"}}},"artBack":{"data":{"id":22890,"attributes":{"name":"04010008EN_Wedge_Antilles_Leader_Unit.png","alternativeText":null,"caption":null,"width":300,"height":419,"formats":{"card":{"ext":".png","url":"https://cdn.starwarsunlimited.com//card_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png","hash":"card_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89","mime":"image/png","name":"card_04010008EN_Wedge_Antilles_Leader_Unit.png","path":null,"size":196.54,"width":286,"height":400},"xsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png","hash":"xsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89","mime":"image/png","name":"xsmall_04010008EN_Wedge_Antilles_Leader_Unit.png","path":null,"size":121.26,"width":215,"height":300},"xxsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png","hash":"xxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89","mime":"image/png","name":"xxsmall_04010008EN_Wedge_Antilles_Leader_Unit.png","path":null,"size":60.8,"width":143,"height":200},"xxxsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xxxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png","hash":"xxxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89","mime":"image/png","name":"xxxsmall_04010008EN_Wedge_Antilles_Leader_Unit.png","path":null,"size":36.86,"width":107,"height":150},"thumbnail":{"ext":".png","url":"https://cdn.starwarsunlimited.com//thumbnail_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png","hash":"thumbnail_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89","mime":"image/png","name":"thumbnail_04010008EN_Wedge_Antilles_Leader_Unit.png","path":null,"size":89.06,"width":179,"height":250}},"hash":"04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89","ext":".png","mime":"image/png","size":48.86,"url":"https://cdn.starwarsunlimited.com//04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png","previewUrl":null,"provider":"aws-s3","provider_metadata":null,"createdAt":"2024-11-26T19:43:48.985Z","updatedAt":"2024-11-26T19:43:48.985Z"}}},"artThumbnail":{"data":{"id":21152,"attributes":{"name":"04010008EN_Wedge_Antilles_Leader_Unit_Thumbnail.png","alternativeText":null,"caption":null,"width":300,"height":100,"formats":{"xxsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c.png","hash":"xxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c","mime":"image/png","name":"xxsmall_04010008EN_Wedge_Antilles_Leader_Unit_Thumbnail.png","path":null,"size":31.17,"width":200,"height":67},"xxxsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xxxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c.png","hash":"xxxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c","mime":"image/png","name":"xxxsmall_04010008EN_Wedge_Antilles_Leader_Unit_Thumbnail.png","path":null,"size":18.37,"width":150,"height":50},"thumbnail":{"ext":".png","url":"https://cdn.starwarsunlimited.com//thumbnail_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c.png","hash":"thumbnail_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c","mime":"image/png","name":"thumbnail_04010008EN_Wedge_Antilles_Leader_Unit_Thumbnail.png","path":null,"size":46.19,"width":250,"height":83}},"hash":"04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c","ext":".png","mime":"image/png","size":17.99,"url":"https://cdn.starwarsunlimited.com//04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c.png","previewUrl":null,"provider":"aws-s3","provider_metadata":null,"createdAt":"2024-11-26T19:15:20.283Z","updatedAt":"2024-11-26T19:15:20.283Z"}}},"localizations":{"data":[{"id":19515,"attributes":{"title":"Wedge Antilles","subtitle":"Leader Della Squadriglia Rossa","cardNumber":8,"cardCount":257,"artist":"David Buisan","artFrontHorizontal":true,"artBackHorizontal":null,"hasFoil":true,"cost":5,"hp":6,"power":3,"text":"Azione [Esaurire]: Gioca 1 carta dalla tua mano usando Pilotaggio. Essa costa\n1 risorsa in meno.","textStyled":"<p><strong>Azione [</strong><img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_exhaust_0c450d09d4.png\" alt=\"icon_exhaust.png\"><strong>]:</strong> Gioca 1 carta dalla tua mano usando <strong>Pilotaggio</strong>. Essa costa <img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_cost_1_6878a6fe98.png\" alt=\"icon_cost_1.png\"> in meno.</p>","deployBox":"","deployBoxStyled":"","epicAction":"Azione Epica: Se controlli \n5 o più risorse, scegli 1 effetto:\nSchiera questo leader.\nSchiera questo leader come miglioria su un'unità Veicolo amica priva di carte Pilota.","epicActionStyled":"<p><strong>Azione Epica:</strong> Se controlli 5 o più risorse, scegli 1 effetto:</p><ul><li>Schiera questo leader.</li><li>Schiera questo leader come miglioria su un'unità <i><strong>Veicolo</strong></i> amica priva di carte <i><strong>Pilota</strong></i>.</li></ul>","linkHtml":"<a href=\"/cards?cid=0011262813\" class=\"card-tooltip\" data-card=\"0011262813\">Wedge Antilles</a>","cardId":"19511","createdAt":"2024-11-27T04:40:34.409Z","updatedAt":"2025-01-09T16:20:58.899Z","publishedAt":"2025-01-09T16:20:57.683Z","locale":"it","hyperspace":false,"unique":true,"showcase":false,"cardUid":"0011262813","rules":null,"rulesStyled":null,"serialCode":"04010008","upgradeHp":4,"upgradePower":3}},{"id":19514,"attributes":{"title":"Wedge Antilles","subtitle":"Leader De L'Escadron Red","cardNumber":8,"cardCount":257,"artist":"David Buisan","artFrontHorizontal":true,"artBackHorizontal":null,"hasFoil":true,"cost":5,"hp":6,"power":3,"text":"Action [Inclinez] : jouez une carte de votre main en utilisant Pilotage. Elle coûte 1 ressource de moins.","textStyled":"<p><strong>Action [</strong><img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_exhaust_0c450d09d4.png\" alt=\"icon_exhaust.png\"><strong>] :</strong> jouez une carte de votre main en utilisant <strong>Pilotage</strong>. Elle coûte <img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_cost_1_6878a6fe98.png\" alt=\"icon_cost_1.png\"> de moins.</p>","deployBox":"","deployBoxStyled":"","epicAction":"Action Épique : si vous contrôlez au moins 5 ressources, choisissez l'un :\nDéployez ce leader.\nDéployez ce leader en tant qu'amélioration sur une unité VÉHICULE amie sans PILOTE dessus.","epicActionStyled":"<p><strong>Action Épique :</strong> si vous contrôlez au moins 5 ressources, choisissez l'un :</p><ul><li>Déployez ce leader.</li><li>Déployez ce leader en tant qu'amélioration sur une unité <i><strong>VÉHICULE</strong></i> amie sans <i><strong>PILOTE</strong></i> dessus.</li></ul>","linkHtml":"<a href=\"/cards?cid=0011262813\" class=\"card-tooltip\" data-card=\"0011262813\">Wedge Antilles</a>","cardId":"19511","createdAt":"2024-11-27T04:40:33.982Z","updatedAt":"2025-01-09T16:20:59.443Z","publishedAt":"2025-01-09T16:20:45.174Z","locale":"fr","hyperspace":false,"unique":true,"showcase":false,"cardUid":"0011262813","rules":null,"rulesStyled":"","serialCode":"04010008","upgradeHp":4,"upgradePower":3}},{"id":19513,"attributes":{"title":"Wedge Antilles","subtitle":"Jefe del Escuadrón Rojo","cardNumber":8,"cardCount":257,"artist":"David Buisan","artFrontHorizontal":true,"artBackHorizontal":null,"hasFoil":true,"cost":5,"hp":6,"power":3,"text":"Acción [Agota]: Juega una carta desde tu mano usando Pilotaje. Cuesta 1 recurso menos.","textStyled":"<p><strong>Acción [</strong><img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_exhaust_0c450d09d4.png\" alt=\"icon_exhaust.png\"><strong>]:</strong> Juega una carta desde tu mano usando <strong>Pilotaje</strong>. Cuesta <img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_cost_1_6878a6fe98.png\" alt=\"icon_cost_1.png\"> menos.</p>","deployBox":"","deployBoxStyled":"","epicAction":"Acción épica: Si controlas al menos 5 recursos, elige una opción:\nDespliega este líder.\nDespliega este líder como mejora sobre una unidad Vehículo aliada \nque no tenga un Piloto.","epicActionStyled":"<p><strong>Acción épica:</strong> Si controlas al menos 5 recursos, elige una opción:</p><ul><li>Despliega este líder.</li><li>Despliega este líder como mejora sobre una unidad <i><strong>Vehículo</strong></i> aliada que no tenga un <i><strong>Piloto</strong></i>.</li></ul>","linkHtml":"<a href=\"/cards?cid=0011262813\" class=\"card-tooltip\" data-card=\"0011262813\">Wedge Antilles</a>","cardId":"19511","createdAt":"2024-11-27T04:40:33.613Z","updatedAt":"2025-01-09T16:20:59.462Z","publishedAt":"2025-01-09T16:20:51.078Z","locale":"es","hyperspace":false,"unique":true,"showcase":false,"cardUid":"0011262813","rules":null,"rulesStyled":"","serialCode":"04010008","upgradeHp":4,"upgradePower":3}},{"id":19512,"attributes":{"title":"Wedge Antilles","subtitle":"Staffelführer der Rot-Staffel","cardNumber":8,"cardCount":257,"artist":"David Buisan","artFrontHorizontal":true,"artBackHorizontal":null,"hasFoil":true,"cost":5,"hp":6,"power":3,"text":"Aktion [Erschöpfe]: Spiele eine\nKarte von deiner Hand\ndurch Pilotieren.\nSie kostet 1 ressource weniger.","textStyled":"<p><strong>Aktion [</strong><img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_exhaust_0c450d09d4.png\" alt=\"icon_exhaust.png\"><strong>]:</strong> Spiele eine Karte von deiner Hand durch <strong>Pilotieren</strong>. Sie kostet <img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_cost_1_6878a6fe98.png\" alt=\"icon_cost_1.png\"> weniger.</p>","deployBox":"","deployBoxStyled":"","epicAction":"Epische Aktion: Falls du 5 oder mehr Ressourcen kontrollierst, wähle 1:\nRufe diesen Anführer.\nRufe diesen Anführer als Upgrade an eine befreundete Fahrzeug-Einheit ohne angehängten Piloten.","epicActionStyled":"<p><strong>Epische Aktion:</strong> Falls du 5 oder mehr Ressourcen kontrollierst, wähle 1:</p><ul><li>Rufe diesen Anführer.</li><li>Rufe diesen Anführer als Upgrade an eine befreundete <i><strong>Fahrzeug</strong></i>-Einheit ohne angehängten <i><strong>Piloten</strong></i>.</li></ul>","linkHtml":"<a href=\"/cards?cid=0011262813\" class=\"card-tooltip\" data-card=\"0011262813\">Wedge Antilles</a>","cardId":"19511","createdAt":"2024-11-27T04:40:33.292Z","updatedAt":"2025-01-09T16:20:59.478Z","publishedAt":"2025-01-09T16:20:38.725Z","locale":"de","hyperspace":false,"unique":true,"showcase":false,"cardUid":"0011262813","rules":null,"rulesStyled":"","serialCode":"04010008","upgradeHp":4,"upgradePower":3}}]},"aspects":{"data":[{"id":7,"attributes":{"name":"Command","description":"<p>Accelerate your resources and call upon lots of units or strengthen the units you already have in play. This is the aspect of choice for players who want to overwhelm their opponents with a massive board presence. &nbsp;</p>","color":"#0b992d","createdAt":"2023-08-10T21:06:20.704Z","updatedAt":"2024-07-15T21:32:40.603Z","publishedAt":"2023-11-15T20:01:18.812Z","locale":"en","englishName":"Command","sortValue":5}},{"id":22,"attributes":{"name":"Heroism","description":"<p>Fight for peace and justice with cards that feature the protagonists of the <i>Star Wars</i> series. This aspect is great for players who want their cards to support and protect each other while pressing the attack. This aspect is often paired with another aspect on a card.&nbsp;</p>","color":"#ffffff","createdAt":"2023-08-10T21:15:42.385Z","updatedAt":"2024-07-15T21:41:00.219Z","publishedAt":"2023-11-15T20:01:41.925Z","locale":"en","englishName":"Heroism","sortValue":25}}]},"aspectDuplicates":{"data":[]},"type":{"data":{"id":4,"attributes":{"name":"Leader","description":"","value":"Leader","createdAt":"2023-08-14T21:36:36.932Z","updatedAt":"2024-03-05T17:11:46.417Z","publishedAt":"2023-11-15T17:30:41.305Z","locale":"en","sortValue":1}}},"type2":{"data":{"id":6,"attributes":{"name":"Leader Unit","description":"","value":"Leader Unit","createdAt":"2023-08-14T21:41:58.575Z","updatedAt":"2024-03-05T17:12:16.062Z","publishedAt":"2023-11-15T17:30:47.748Z","locale":"en","sortValue":1}}},"traits":{"data":[{"id":37,"attributes":{"name":"Rebel","description":"","createdAt":"2023-08-15T14:41:27.374Z","updatedAt":"2023-11-16T00:00:24.048Z","publishedAt":"2023-11-16T00:00:24.044Z","locale":"en"}},{"id":278,"attributes":{"name":"Pilot","description":"","createdAt":"2024-11-19T20:43:41.945Z","updatedAt":"2024-12-04T16:09:15.805Z","publishedAt":"2024-12-04T16:09:15.800Z","locale":"en"}}]},"arenas":{"data":[{"id":2,"attributes":{"name":"Ground","description":null,"createdAt":"2023-08-15T14:32:07.804Z","updatedAt":"2023-08-18T21:37:34.527Z","publishedAt":"2023-08-18T21:37:34.522Z","locale":"en"}}]},"keywords":{"data":[{"id":67,"attributes":{"name":"Piloting","description":"","createdAt":"2024-11-19T20:57:18.766Z","updatedAt":"2024-12-04T16:09:54.791Z","publishedAt":"2024-12-04T16:09:54.788Z","locale":"en"}}]},"rarity":{"data":{"id":2,"attributes":{"name":"Common","character":"C","color":"#964d02","createdAt":"2023-08-08T20:26:30.378Z","updatedAt":"2024-04-25T14:06:46.441Z","publishedAt":"2023-11-15T20:15:14.512Z","locale":"en","englishName":"Common","sortValue":2}}},"expansion":{"data":{"id":23,"attributes":{"name":"Jump to Lightspeed","description":"","code":"JTL","createdAt":"2024-11-19T20:22:30.978Z","updatedAt":"2024-12-04T15:54:05.681Z","publishedAt":"2024-12-04T15:53:40.404Z","locale":"en","sortValue":4}}},"variantTypes":{"data":[{"id":46,"attributes":{"name":"Standard","description":null,"createdAt":"2024-07-15T14:37:37.643Z","updatedAt":"2024-07-15T19:55:03.314Z","publishedAt":"2024-07-15T19:54:44.645Z","locale":"en","variantId":"01","foil":false,"sortValue":10,"icon":{"data":{"id":8701,"attributes":{"name":"icon_standard.png","alternativeText":null,"caption":null,"width":144,"height":144,"formats":null,"hash":"icon_standard_7dbd7cd8e6","ext":".png","mime":"image/png","size":0.39,"url":"https://cdn.starwarsunlimited.com//icon_standard_7dbd7cd8e6.png","previewUrl":null,"provider":"aws-s3","provider_metadata":null,"createdAt":"2024-07-15T14:40:17.066Z","updatedAt":"2024-07-15T14:40:17.066Z"}}}}}]},"variantOf":{"data":null},"reprintOf":{"data":null},"validationId":"0011262813"}}
+{
+  "id": 19511,
+  "attributes": {
+    "title": "Wedge Antilles",
+    "subtitle": "Leader of Red Squadron",
+    "cardNumber": 8,
+    "cardCount": 257,
+    "artist": "David Buisan",
+    "artFrontHorizontal": true,
+    "artBackHorizontal": null,
+    "hasFoil": true,
+    "cost": 5,
+    "hp": 6,
+    "power": 3,
+    "text": "Action [Exhaust]: Play a card from your hand using Piloting. It costs 1 resource less.",
+    "textStyled": "<p><strong>Action [</strong><img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_exhaust_0c450d09d4.png\" alt=\"icon_exhaust.png\"><strong>]:</strong> Play a card from your hand using <strong>Piloting</strong>. It costs <img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_cost_1_6878a6fe98.png\" alt=\"icon_cost_1.png\"> less.</p>",
+    "deployBox": "",
+    "deployBoxStyled": "",
+    "epicAction": "Epic Action: If you control 5 or more resources, choose one:\nDeploy this leader.\nDeploy this leader as an upgrade on a friendly Vehicle unit without a Pilot on it.",
+    "epicActionStyled": "<p><strong>Epic Action:</strong> If you control 5 or more resources, choose one:</p><ul><li>Deploy this leader.</li><li>Deploy this leader as an upgrade on a friendly <i><strong>Vehicle</strong></i> unit without a <i><strong>Pilot</strong></i> on it.</li></ul>",
+    "linkHtml": "<a href=\"/cards?cid=0011262813\" class=\"card-tooltip\" data-card=\"0011262813\">Wedge Antilles</a>",
+    "cardId": null,
+    "createdAt": "2024-11-27T04:40:32.964Z",
+    "updatedAt": "2025-01-09T16:20:59.428Z",
+    "publishedAt": "2025-01-09T16:20:32.542Z",
+    "locale": "en",
+    "hyperspace": false,
+    "unique": true,
+    "showcase": false,
+    "cardUid": "0011262813",
+    "rules": null,
+    "rulesStyled": "",
+    "serialCode": "04010008",
+    "upgradeHp": 4,
+    "upgradePower": 3,
+    "artFront": {
+      "data": {
+        "id": 24396,
+        "attributes": {
+          "name": "04010008EN_Wedge_Antilles_Leader.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 419,
+          "height": 300,
+          "formats": {
+            "card": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//card_04010008_EN_Wedge_Antilles_Leader_1f73212484.png",
+              "hash": "card_04010008_EN_Wedge_Antilles_Leader_1f73212484",
+              "mime": "image/png",
+              "name": "card_04010008EN_Wedge_Antilles_Leader.png",
+              "path": null,
+              "size": 207.51,
+              "width": 400,
+              "height": 286
+            },
+            "xsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484.png",
+              "hash": "xsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484",
+              "mime": "image/png",
+              "name": "xsmall_04010008EN_Wedge_Antilles_Leader.png",
+              "path": null,
+              "size": 126.8,
+              "width": 300,
+              "height": 215
+            },
+            "xxsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xxsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484.png",
+              "hash": "xxsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484",
+              "mime": "image/png",
+              "name": "xxsmall_04010008EN_Wedge_Antilles_Leader.png",
+              "path": null,
+              "size": 62.61,
+              "width": 200,
+              "height": 143
+            },
+            "xxxsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xxxsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484.png",
+              "hash": "xxxsmall_04010008_EN_Wedge_Antilles_Leader_1f73212484",
+              "mime": "image/png",
+              "name": "xxxsmall_04010008EN_Wedge_Antilles_Leader.png",
+              "path": null,
+              "size": 37.96,
+              "width": 150,
+              "height": 107
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//thumbnail_04010008_EN_Wedge_Antilles_Leader_1f73212484.png",
+              "hash": "thumbnail_04010008_EN_Wedge_Antilles_Leader_1f73212484",
+              "mime": "image/png",
+              "name": "thumbnail_04010008EN_Wedge_Antilles_Leader.png",
+              "path": null,
+              "size": 72.8,
+              "width": 218,
+              "height": 156
+            }
+          },
+          "hash": "04010008_EN_Wedge_Antilles_Leader_1f73212484",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 53.37,
+          "url": "https://cdn.starwarsunlimited.com//04010008_EN_Wedge_Antilles_Leader_1f73212484.png",
+          "previewUrl": null,
+          "provider": "aws-s3",
+          "provider_metadata": null,
+          "createdAt": "2024-11-26T20:10:47.787Z",
+          "updatedAt": "2024-11-26T20:10:47.787Z"
+        }
+      }
+    },
+    "artBack": {
+      "data": {
+        "id": 22890,
+        "attributes": {
+          "name": "04010008EN_Wedge_Antilles_Leader_Unit.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 300,
+          "height": 419,
+          "formats": {
+            "card": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//card_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png",
+              "hash": "card_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89",
+              "mime": "image/png",
+              "name": "card_04010008EN_Wedge_Antilles_Leader_Unit.png",
+              "path": null,
+              "size": 196.54,
+              "width": 286,
+              "height": 400
+            },
+            "xsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png",
+              "hash": "xsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89",
+              "mime": "image/png",
+              "name": "xsmall_04010008EN_Wedge_Antilles_Leader_Unit.png",
+              "path": null,
+              "size": 121.26,
+              "width": 215,
+              "height": 300
+            },
+            "xxsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png",
+              "hash": "xxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89",
+              "mime": "image/png",
+              "name": "xxsmall_04010008EN_Wedge_Antilles_Leader_Unit.png",
+              "path": null,
+              "size": 60.8,
+              "width": 143,
+              "height": 200
+            },
+            "xxxsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xxxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png",
+              "hash": "xxxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89",
+              "mime": "image/png",
+              "name": "xxxsmall_04010008EN_Wedge_Antilles_Leader_Unit.png",
+              "path": null,
+              "size": 36.86,
+              "width": 107,
+              "height": 150
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//thumbnail_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png",
+              "hash": "thumbnail_04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89",
+              "mime": "image/png",
+              "name": "thumbnail_04010008EN_Wedge_Antilles_Leader_Unit.png",
+              "path": null,
+              "size": 89.06,
+              "width": 179,
+              "height": 250
+            }
+          },
+          "hash": "04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 48.86,
+          "url": "https://cdn.starwarsunlimited.com//04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png",
+          "previewUrl": null,
+          "provider": "aws-s3",
+          "provider_metadata": null,
+          "createdAt": "2024-11-26T19:43:48.985Z",
+          "updatedAt": "2024-11-26T19:43:48.985Z"
+        }
+      }
+    },
+    "artThumbnail": {
+      "data": {
+        "id": 21152,
+        "attributes": {
+          "name": "04010008EN_Wedge_Antilles_Leader_Unit_Thumbnail.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 300,
+          "height": 100,
+          "formats": {
+            "xxsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c.png",
+              "hash": "xxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c",
+              "mime": "image/png",
+              "name": "xxsmall_04010008EN_Wedge_Antilles_Leader_Unit_Thumbnail.png",
+              "path": null,
+              "size": 31.17,
+              "width": 200,
+              "height": 67
+            },
+            "xxxsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xxxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c.png",
+              "hash": "xxxsmall_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c",
+              "mime": "image/png",
+              "name": "xxxsmall_04010008EN_Wedge_Antilles_Leader_Unit_Thumbnail.png",
+              "path": null,
+              "size": 18.37,
+              "width": 150,
+              "height": 50
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//thumbnail_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c.png",
+              "hash": "thumbnail_04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c",
+              "mime": "image/png",
+              "name": "thumbnail_04010008EN_Wedge_Antilles_Leader_Unit_Thumbnail.png",
+              "path": null,
+              "size": 46.19,
+              "width": 250,
+              "height": 83
+            }
+          },
+          "hash": "04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 17.99,
+          "url": "https://cdn.starwarsunlimited.com//04010008_EN_Wedge_Antilles_Leader_Unit_Thumbnail_f751c6a70c.png",
+          "previewUrl": null,
+          "provider": "aws-s3",
+          "provider_metadata": null,
+          "createdAt": "2024-11-26T19:15:20.283Z",
+          "updatedAt": "2024-11-26T19:15:20.283Z"
+        }
+      }
+    },
+    "localizations": {
+      "data": [
+        {
+          "id": 19515,
+          "attributes": {
+            "title": "Wedge Antilles",
+            "subtitle": "Leader Della Squadriglia Rossa",
+            "cardNumber": 8,
+            "cardCount": 257,
+            "artist": "David Buisan",
+            "artFrontHorizontal": true,
+            "artBackHorizontal": null,
+            "hasFoil": true,
+            "cost": 5,
+            "hp": 6,
+            "power": 3,
+            "text": "Azione [Esaurire]: Gioca 1 carta dalla tua mano usando Pilotaggio. Essa costa\n1 risorsa in meno.",
+            "textStyled": "<p><strong>Azione [</strong><img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_exhaust_0c450d09d4.png\" alt=\"icon_exhaust.png\"><strong>]:</strong> Gioca 1 carta dalla tua mano usando <strong>Pilotaggio</strong>. Essa costa <img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_cost_1_6878a6fe98.png\" alt=\"icon_cost_1.png\"> in meno.</p>",
+            "deployBox": "",
+            "deployBoxStyled": "",
+            "epicAction": "Azione Epica: Se controlli \n5 o più risorse, scegli 1 effetto:\nSchiera questo leader.\nSchiera questo leader come miglioria su un'unità Veicolo amica priva di carte Pilota.",
+            "epicActionStyled": "<p><strong>Azione Epica:</strong> Se controlli 5 o più risorse, scegli 1 effetto:</p><ul><li>Schiera questo leader.</li><li>Schiera questo leader come miglioria su un'unità <i><strong>Veicolo</strong></i> amica priva di carte <i><strong>Pilota</strong></i>.</li></ul>",
+            "linkHtml": "<a href=\"/cards?cid=0011262813\" class=\"card-tooltip\" data-card=\"0011262813\">Wedge Antilles</a>",
+            "cardId": "19511",
+            "createdAt": "2024-11-27T04:40:34.409Z",
+            "updatedAt": "2025-01-09T16:20:58.899Z",
+            "publishedAt": "2025-01-09T16:20:57.683Z",
+            "locale": "it",
+            "hyperspace": false,
+            "unique": true,
+            "showcase": false,
+            "cardUid": "0011262813",
+            "rules": null,
+            "rulesStyled": null,
+            "serialCode": "04010008",
+            "upgradeHp": 4,
+            "upgradePower": 3
+          }
+        },
+        {
+          "id": 19514,
+          "attributes": {
+            "title": "Wedge Antilles",
+            "subtitle": "Leader De L'Escadron Red",
+            "cardNumber": 8,
+            "cardCount": 257,
+            "artist": "David Buisan",
+            "artFrontHorizontal": true,
+            "artBackHorizontal": null,
+            "hasFoil": true,
+            "cost": 5,
+            "hp": 6,
+            "power": 3,
+            "text": "Action [Inclinez] : jouez une carte de votre main en utilisant Pilotage. Elle coûte 1 ressource de moins.",
+            "textStyled": "<p><strong>Action [</strong><img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_exhaust_0c450d09d4.png\" alt=\"icon_exhaust.png\"><strong>] :</strong> jouez une carte de votre main en utilisant <strong>Pilotage</strong>. Elle coûte <img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_cost_1_6878a6fe98.png\" alt=\"icon_cost_1.png\"> de moins.</p>",
+            "deployBox": "",
+            "deployBoxStyled": "",
+            "epicAction": "Action Épique : si vous contrôlez au moins 5 ressources, choisissez l'un :\nDéployez ce leader.\nDéployez ce leader en tant qu'amélioration sur une unité VÉHICULE amie sans PILOTE dessus.",
+            "epicActionStyled": "<p><strong>Action Épique :</strong> si vous contrôlez au moins 5 ressources, choisissez l'un :</p><ul><li>Déployez ce leader.</li><li>Déployez ce leader en tant qu'amélioration sur une unité <i><strong>VÉHICULE</strong></i> amie sans <i><strong>PILOTE</strong></i> dessus.</li></ul>",
+            "linkHtml": "<a href=\"/cards?cid=0011262813\" class=\"card-tooltip\" data-card=\"0011262813\">Wedge Antilles</a>",
+            "cardId": "19511",
+            "createdAt": "2024-11-27T04:40:33.982Z",
+            "updatedAt": "2025-01-09T16:20:59.443Z",
+            "publishedAt": "2025-01-09T16:20:45.174Z",
+            "locale": "fr",
+            "hyperspace": false,
+            "unique": true,
+            "showcase": false,
+            "cardUid": "0011262813",
+            "rules": null,
+            "rulesStyled": "",
+            "serialCode": "04010008",
+            "upgradeHp": 4,
+            "upgradePower": 3
+          }
+        },
+        {
+          "id": 19513,
+          "attributes": {
+            "title": "Wedge Antilles",
+            "subtitle": "Jefe del Escuadrón Rojo",
+            "cardNumber": 8,
+            "cardCount": 257,
+            "artist": "David Buisan",
+            "artFrontHorizontal": true,
+            "artBackHorizontal": null,
+            "hasFoil": true,
+            "cost": 5,
+            "hp": 6,
+            "power": 3,
+            "text": "Acción [Agota]: Juega una carta desde tu mano usando Pilotaje. Cuesta 1 recurso menos.",
+            "textStyled": "<p><strong>Acción [</strong><img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_exhaust_0c450d09d4.png\" alt=\"icon_exhaust.png\"><strong>]:</strong> Juega una carta desde tu mano usando <strong>Pilotaje</strong>. Cuesta <img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_cost_1_6878a6fe98.png\" alt=\"icon_cost_1.png\"> menos.</p>",
+            "deployBox": "",
+            "deployBoxStyled": "",
+            "epicAction": "Acción épica: Si controlas al menos 5 recursos, elige una opción:\nDespliega este líder.\nDespliega este líder como mejora sobre una unidad Vehículo aliada \nque no tenga un Piloto.",
+            "epicActionStyled": "<p><strong>Acción épica:</strong> Si controlas al menos 5 recursos, elige una opción:</p><ul><li>Despliega este líder.</li><li>Despliega este líder como mejora sobre una unidad <i><strong>Vehículo</strong></i> aliada que no tenga un <i><strong>Piloto</strong></i>.</li></ul>",
+            "linkHtml": "<a href=\"/cards?cid=0011262813\" class=\"card-tooltip\" data-card=\"0011262813\">Wedge Antilles</a>",
+            "cardId": "19511",
+            "createdAt": "2024-11-27T04:40:33.613Z",
+            "updatedAt": "2025-01-09T16:20:59.462Z",
+            "publishedAt": "2025-01-09T16:20:51.078Z",
+            "locale": "es",
+            "hyperspace": false,
+            "unique": true,
+            "showcase": false,
+            "cardUid": "0011262813",
+            "rules": null,
+            "rulesStyled": "",
+            "serialCode": "04010008",
+            "upgradeHp": 4,
+            "upgradePower": 3
+          }
+        },
+        {
+          "id": 19512,
+          "attributes": {
+            "title": "Wedge Antilles",
+            "subtitle": "Staffelführer der Rot-Staffel",
+            "cardNumber": 8,
+            "cardCount": 257,
+            "artist": "David Buisan",
+            "artFrontHorizontal": true,
+            "artBackHorizontal": null,
+            "hasFoil": true,
+            "cost": 5,
+            "hp": 6,
+            "power": 3,
+            "text": "Aktion [Erschöpfe]: Spiele eine\nKarte von deiner Hand\ndurch Pilotieren.\nSie kostet 1 ressource weniger.",
+            "textStyled": "<p><strong>Aktion [</strong><img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_exhaust_0c450d09d4.png\" alt=\"icon_exhaust.png\"><strong>]:</strong> Spiele eine Karte von deiner Hand durch <strong>Pilotieren</strong>. Sie kostet <img src=\"https://ffg-prod-uploads.s3.amazonaws.com/icon_cost_1_6878a6fe98.png\" alt=\"icon_cost_1.png\"> weniger.</p>",
+            "deployBox": "",
+            "deployBoxStyled": "",
+            "epicAction": "Epische Aktion: Falls du 5 oder mehr Ressourcen kontrollierst, wähle 1:\nRufe diesen Anführer.\nRufe diesen Anführer als Upgrade an eine befreundete Fahrzeug-Einheit ohne angehängten Piloten.",
+            "epicActionStyled": "<p><strong>Epische Aktion:</strong> Falls du 5 oder mehr Ressourcen kontrollierst, wähle 1:</p><ul><li>Rufe diesen Anführer.</li><li>Rufe diesen Anführer als Upgrade an eine befreundete <i><strong>Fahrzeug</strong></i>-Einheit ohne angehängten <i><strong>Piloten</strong></i>.</li></ul>",
+            "linkHtml": "<a href=\"/cards?cid=0011262813\" class=\"card-tooltip\" data-card=\"0011262813\">Wedge Antilles</a>",
+            "cardId": "19511",
+            "createdAt": "2024-11-27T04:40:33.292Z",
+            "updatedAt": "2025-01-09T16:20:59.478Z",
+            "publishedAt": "2025-01-09T16:20:38.725Z",
+            "locale": "de",
+            "hyperspace": false,
+            "unique": true,
+            "showcase": false,
+            "cardUid": "0011262813",
+            "rules": null,
+            "rulesStyled": "",
+            "serialCode": "04010008",
+            "upgradeHp": 4,
+            "upgradePower": 3
+          }
+        }
+      ]
+    },
+    "aspects": {
+      "data": [
+        {
+          "id": 7,
+          "attributes": {
+            "name": "Command",
+            "description": "<p>Accelerate your resources and call upon lots of units or strengthen the units you already have in play. This is the aspect of choice for players who want to overwhelm their opponents with a massive board presence. &nbsp;</p>",
+            "color": "#0b992d",
+            "createdAt": "2023-08-10T21:06:20.704Z",
+            "updatedAt": "2024-07-15T21:32:40.603Z",
+            "publishedAt": "2023-11-15T20:01:18.812Z",
+            "locale": "en",
+            "englishName": "Command",
+            "sortValue": 5
+          }
+        },
+        {
+          "id": 22,
+          "attributes": {
+            "name": "Heroism",
+            "description": "<p>Fight for peace and justice with cards that feature the protagonists of the <i>Star Wars</i> series. This aspect is great for players who want their cards to support and protect each other while pressing the attack. This aspect is often paired with another aspect on a card.&nbsp;</p>",
+            "color": "#ffffff",
+            "createdAt": "2023-08-10T21:15:42.385Z",
+            "updatedAt": "2024-07-15T21:41:00.219Z",
+            "publishedAt": "2023-11-15T20:01:41.925Z",
+            "locale": "en",
+            "englishName": "Heroism",
+            "sortValue": 25
+          }
+        }
+      ]
+    },
+    "aspectDuplicates": {
+      "data": []
+    },
+    "type": {
+      "data": {
+        "id": 4,
+        "attributes": {
+          "name": "Leader",
+          "description": "",
+          "value": "Leader",
+          "createdAt": "2023-08-14T21:36:36.932Z",
+          "updatedAt": "2024-03-05T17:11:46.417Z",
+          "publishedAt": "2023-11-15T17:30:41.305Z",
+          "locale": "en",
+          "sortValue": 1
+        }
+      }
+    },
+    "type2": {
+      "data": {
+        "id": 6,
+        "attributes": {
+          "name": "Leader Unit",
+          "description": "",
+          "value": "Leader Unit",
+          "createdAt": "2023-08-14T21:41:58.575Z",
+          "updatedAt": "2024-03-05T17:12:16.062Z",
+          "publishedAt": "2023-11-15T17:30:47.748Z",
+          "locale": "en",
+          "sortValue": 1
+        }
+      }
+    },
+    "traits": {
+      "data": [
+        {
+          "id": 37,
+          "attributes": {
+            "name": "Rebel",
+            "description": "",
+            "createdAt": "2023-08-15T14:41:27.374Z",
+            "updatedAt": "2023-11-16T00:00:24.048Z",
+            "publishedAt": "2023-11-16T00:00:24.044Z",
+            "locale": "en"
+          }
+        },
+        {
+          "id": 278,
+          "attributes": {
+            "name": "Pilot",
+            "description": "",
+            "createdAt": "2024-11-19T20:43:41.945Z",
+            "updatedAt": "2024-12-04T16:09:15.805Z",
+            "publishedAt": "2024-12-04T16:09:15.800Z",
+            "locale": "en"
+          }
+        }
+      ]
+    },
+    "arenas": {
+      "data": [
+        {
+          "id": 2,
+          "attributes": {
+            "name": "Ground",
+            "description": null,
+            "createdAt": "2023-08-15T14:32:07.804Z",
+            "updatedAt": "2023-08-18T21:37:34.527Z",
+            "publishedAt": "2023-08-18T21:37:34.522Z",
+            "locale": "en"
+          }
+        }
+      ]
+    },
+    "keywords": {
+      "data": [
+        {
+          "id": 67,
+          "attributes": {
+            "name": "Piloting",
+            "description": "",
+            "createdAt": "2024-11-19T20:57:18.766Z",
+            "updatedAt": "2024-12-04T16:09:54.791Z",
+            "publishedAt": "2024-12-04T16:09:54.788Z",
+            "locale": "en"
+          }
+        }
+      ]
+    },
+    "rarity": {
+      "data": {
+        "id": 2,
+        "attributes": {
+          "name": "Common",
+          "character": "C",
+          "color": "#964d02",
+          "createdAt": "2023-08-08T20:26:30.378Z",
+          "updatedAt": "2024-04-25T14:06:46.441Z",
+          "publishedAt": "2023-11-15T20:15:14.512Z",
+          "locale": "en",
+          "englishName": "Common",
+          "sortValue": 2
+        }
+      }
+    },
+    "expansion": {
+      "data": {
+        "id": 23,
+        "attributes": {
+          "name": "Jump to Lightspeed",
+          "description": "",
+          "code": "JTL",
+          "createdAt": "2024-11-19T20:22:30.978Z",
+          "updatedAt": "2024-12-04T15:54:05.681Z",
+          "publishedAt": "2024-12-04T15:53:40.404Z",
+          "locale": "en",
+          "sortValue": 4
+        }
+      }
+    },
+    "variantTypes": {
+      "data": [
+        {
+          "id": 46,
+          "attributes": {
+            "name": "Standard",
+            "description": null,
+            "createdAt": "2024-07-15T14:37:37.643Z",
+            "updatedAt": "2024-07-15T19:55:03.314Z",
+            "publishedAt": "2024-07-15T19:54:44.645Z",
+            "locale": "en",
+            "variantId": "01",
+            "foil": false,
+            "sortValue": 10,
+            "icon": {
+              "data": {
+                "id": 8701,
+                "attributes": {
+                  "name": "icon_standard.png",
+                  "alternativeText": null,
+                  "caption": null,
+                  "width": 144,
+                  "height": 144,
+                  "formats": null,
+                  "hash": "icon_standard_7dbd7cd8e6",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "size": 0.39,
+                  "url": "https://cdn.starwarsunlimited.com//icon_standard_7dbd7cd8e6.png",
+                  "previewUrl": null,
+                  "provider": "aws-s3",
+                  "provider_metadata": null,
+                  "createdAt": "2024-07-15T14:40:17.066Z",
+                  "updatedAt": "2024-07-15T14:40:17.066Z"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "variantOf": {
+      "data": null
+    },
+    "reprintOf": {
+      "data": null
+    },
+    "validationId": "0011262813"
+  }
+}

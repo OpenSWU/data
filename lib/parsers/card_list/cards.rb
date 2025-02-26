@@ -1,5 +1,5 @@
 require "oj"
-require "card"
+require "data"
 
 module Parsers
   module CardList

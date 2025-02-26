@@ -1,5 +1,5 @@
 require "spec_helper"
-require "card"
+require "data"
 
 RSpec.describe Card do
   subject(:card) { Card.new(*valid_attributes.values) }

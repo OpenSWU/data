@@ -1,1 +1,475 @@
-{"id":15421,"attributes":{"title":"Aggrieved Parliamentarian","subtitle":"","cardNumber":252,"cardCount":257,"artist":"Amad Mir","artFrontHorizontal":false,"artBackHorizontal":null,"hasFoil":true,"cost":2,"hp":2,"power":2,"text":"When Played: Choose an opponent. They shuffle their discard pile and put it on the bottom of their deck.","textStyled":"<p><strong>When Played:</strong> Choose an opponent. They shuffle their discard pile and put it on the bottom of their deck.</p>","deployBox":null,"deployBoxStyled":null,"epicAction":null,"epicActionStyled":null,"linkHtml":"<a href=\"/cards?cid=2535372432\" class=\"card-tooltip\" data-card=\"2535372432\">Aggrieved Parliamentarian</a>","cardId":null,"createdAt":"2024-08-09T21:48:46.174Z","updatedAt":"2024-10-24T04:21:45.614Z","publishedAt":"2024-10-24T06:00:00.000Z","locale":"en","hyperspace":false,"unique":false,"showcase":false,"cardUid":"2535372432","rules":null,"rulesStyled":null,"serialCode":"0301252","upgradeHp":null,"upgradePower":null,"artFront":{"data":{"id":19798,"attributes":{"name":"0301252EN_Aggrieved_Parliamentarian.png","alternativeText":null,"caption":null,"width":300,"height":419,"formats":{"card":{"ext":".png","url":"https://cdn.starwarsunlimited.com//card_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png","hash":"card_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92","mime":"image/png","name":"card_0301252EN_Aggrieved_Parliamentarian.png","path":null,"size":187.94,"width":286,"height":400},"xsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png","hash":"xsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92","mime":"image/png","name":"xsmall_0301252EN_Aggrieved_Parliamentarian.png","path":null,"size":115.01,"width":215,"height":300},"xxsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xxsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png","hash":"xxsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92","mime":"image/png","name":"xxsmall_0301252EN_Aggrieved_Parliamentarian.png","path":null,"size":56.94,"width":143,"height":200},"xxxsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xxxsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png","hash":"xxxsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92","mime":"image/png","name":"xxxsmall_0301252EN_Aggrieved_Parliamentarian.png","path":null,"size":34.47,"width":107,"height":150},"thumbnail":{"ext":".png","url":"https://cdn.starwarsunlimited.com//thumbnail_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png","hash":"thumbnail_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92","mime":"image/png","name":"thumbnail_0301252EN_Aggrieved_Parliamentarian.png","path":null,"size":84.4,"width":179,"height":250}},"hash":"0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92","ext":".png","mime":"image/png","size":56.7,"url":"https://cdn.starwarsunlimited.com//0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png","previewUrl":null,"provider":"aws-s3","provider_metadata":null,"createdAt":"2024-08-09T21:09:18.359Z","updatedAt":"2024-08-09T21:09:18.359Z"}}},"artBack":{"data":null},"artThumbnail":{"data":{"id":15211,"attributes":{"name":"0301252EN_Aggrieved_Parliamentarian_Thumbnail.png","alternativeText":null,"caption":null,"width":300,"height":100,"formats":{"xxsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xxsmall_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385.png","hash":"xxsmall_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385","mime":"image/png","name":"xxsmall_0301252EN_Aggrieved_Parliamentarian_Thumbnail.png","path":null,"size":28.48,"width":200,"height":67},"xxxsmall":{"ext":".png","url":"https://cdn.starwarsunlimited.com//xxxsmall_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385.png","hash":"xxxsmall_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385","mime":"image/png","name":"xxxsmall_0301252EN_Aggrieved_Parliamentarian_Thumbnail.png","path":null,"size":17.18,"width":150,"height":50},"thumbnail":{"ext":".png","url":"https://cdn.starwarsunlimited.com//thumbnail_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385.png","hash":"thumbnail_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385","mime":"image/png","name":"thumbnail_0301252EN_Aggrieved_Parliamentarian_Thumbnail.png","path":null,"size":41.55,"width":250,"height":83}},"hash":"0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385","ext":".png","mime":"image/png","size":17.21,"url":"https://cdn.starwarsunlimited.com//0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385.png","previewUrl":null,"provider":"aws-s3","provider_metadata":null,"createdAt":"2024-08-09T19:39:41.397Z","updatedAt":"2024-08-09T19:39:41.397Z"}}},"localizations":{"data":[{"id":15425,"attributes":{"title":"Parlamentare Afflitto","subtitle":"","cardNumber":252,"cardCount":257,"artist":"Amad Mir","artFrontHorizontal":false,"artBackHorizontal":null,"hasFoil":true,"cost":2,"hp":2,"power":2,"text":"Quando Giocata: Scegli 1 avversario. Quell'avversario mescola la sua pila degli scarti e la mette in fondo al suo mazzo.","textStyled":"<p><strong>Quando Giocata:</strong> Scegli 1 avversario. Quell’avversario mescola la sua pila degli scarti e la mette in fondo al suo mazzo.</p>","deployBox":null,"deployBoxStyled":null,"epicAction":null,"epicActionStyled":null,"linkHtml":"<a href=\"/cards?cid=2535372432\" class=\"card-tooltip\" data-card=\"2535372432\">Parlamentare Afflitto</a>","cardId":"15421","createdAt":"2024-08-09T21:48:47.372Z","updatedAt":"2024-10-24T04:21:45.833Z","publishedAt":"2024-10-24T06:00:00.000Z","locale":"it","hyperspace":false,"unique":false,"showcase":false,"cardUid":"2535372432","rules":null,"rulesStyled":null,"serialCode":"0301252","upgradeHp":null,"upgradePower":null}},{"id":15424,"attributes":{"title":"Parlementaire Lésé","subtitle":"","cardNumber":252,"cardCount":257,"artist":"Amad Mir","artFrontHorizontal":false,"artBackHorizontal":null,"hasFoil":true,"cost":2,"hp":2,"power":2,"text":"Une fois jouée : choisissez un adversaire. Il mélange sa défausse et la place sous son deck.","textStyled":"<p><strong>Une fois jouée :</strong> choisissez un adversaire. Il mélange sa défausse et la place sous son deck.</p>","deployBox":null,"deployBoxStyled":null,"epicAction":null,"epicActionStyled":null,"linkHtml":"<a href=\"/cards?cid=2535372432\" class=\"card-tooltip\" data-card=\"2535372432\">Parlementaire Lésé</a>","cardId":"15421","createdAt":"2024-08-09T21:48:47.042Z","updatedAt":"2024-10-24T04:21:46.057Z","publishedAt":"2024-10-24T06:00:00.000Z","locale":"fr","hyperspace":false,"unique":false,"showcase":false,"cardUid":"2535372432","rules":null,"rulesStyled":null,"serialCode":"0301252","upgradeHp":null,"upgradePower":null}},{"id":15423,"attributes":{"title":"Parlamentario ofendido","subtitle":"","cardNumber":252,"cardCount":257,"artist":"Amad Mir","artFrontHorizontal":false,"artBackHorizontal":null,"hasFoil":true,"cost":2,"hp":2,"power":2,"text":"Cuando se juegue: Elige a un adversario. \nEse adversario baraja su pila de descartes y la coloca en la parte inferior de su mazo.","textStyled":"<p><strong>Cuando se juegue:</strong> Elige a un adversario.  Ese adversario baraja su pila de descartes y la coloca en la parte inferior de su mazo.</p>","deployBox":null,"deployBoxStyled":null,"epicAction":null,"epicActionStyled":null,"linkHtml":"<a href=\"/cards?cid=2535372432\" class=\"card-tooltip\" data-card=\"2535372432\">Parlamentario ofendido</a>","cardId":"15421","createdAt":"2024-08-09T21:48:46.737Z","updatedAt":"2024-10-24T04:21:46.281Z","publishedAt":"2024-10-24T06:00:00.000Z","locale":"es","hyperspace":false,"unique":false,"showcase":false,"cardUid":"2535372432","rules":null,"rulesStyled":null,"serialCode":"0301252","upgradeHp":null,"upgradePower":null}},{"id":15422,"attributes":{"title":"Gekränkter Parlamentarier","subtitle":"","cardNumber":252,"cardCount":257,"artist":"Amad Mir","artFrontHorizontal":false,"artBackHorizontal":null,"hasFoil":true,"cost":2,"hp":2,"power":2,"text":"Wenn gespielt: Wähle einen Gegner. \nEr mischt seinen Ablagestapel und legt \nihn unter sein Deck.","textStyled":"<p><strong>Wenn gespielt:</strong> Wähle einen Gegner.  Er mischt seinen Ablagestapel und legt  ihn unter sein Deck.</p>","deployBox":null,"deployBoxStyled":null,"epicAction":null,"epicActionStyled":null,"linkHtml":"<a href=\"/cards?cid=2535372432\" class=\"card-tooltip\" data-card=\"2535372432\">Gekränkter Parlamentarier</a>","cardId":"15421","createdAt":"2024-08-09T21:48:46.457Z","updatedAt":"2024-10-24T04:21:46.506Z","publishedAt":"2024-10-24T06:00:00.000Z","locale":"de","hyperspace":false,"unique":false,"showcase":false,"cardUid":"2535372432","rules":null,"rulesStyled":null,"serialCode":"0301252","upgradeHp":null,"upgradePower":null}}]},"aspects":{"data":[]},"aspectDuplicates":{"data":[]},"type":{"data":{"id":9,"attributes":{"name":"Unit","description":"","value":"Unit","createdAt":"2023-08-14T21:42:29.466Z","updatedAt":"2024-04-25T13:52:29.760Z","publishedAt":"2023-11-15T17:31:08.061Z","locale":"en","sortValue":3}}},"type2":{"data":null},"traits":{"data":[{"id":172,"attributes":{"name":"Separatist","description":"","createdAt":"2023-11-14T00:01:42.999Z","updatedAt":"2023-11-21T17:07:02.874Z","publishedAt":"2023-11-16T00:00:31.539Z","locale":"en"}},{"id":12,"attributes":{"name":"Official","description":"","createdAt":"2023-08-15T14:38:40.778Z","updatedAt":"2023-11-16T00:00:09.096Z","publishedAt":"2023-11-16T00:00:09.091Z","locale":"en"}}]},"arenas":{"data":[{"id":2,"attributes":{"name":"Ground","description":null,"createdAt":"2023-08-15T14:32:07.804Z","updatedAt":"2023-08-18T21:37:34.527Z","publishedAt":"2023-08-18T21:37:34.522Z","locale":"en"}}]},"keywords":{"data":[]},"rarity":{"data":{"id":2,"attributes":{"name":"Common","character":"C","color":"#964d02","createdAt":"2023-08-08T20:26:30.378Z","updatedAt":"2024-04-25T14:06:46.441Z","publishedAt":"2023-11-15T20:15:14.512Z","locale":"en","englishName":"Common","sortValue":2}}},"expansion":{"data":{"id":18,"attributes":{"name":"Twilight of the Republic","description":"","code":"TWI","createdAt":"2024-07-30T21:32:31.246Z","updatedAt":"2024-08-01T15:56:11.322Z","publishedAt":"2024-08-01T15:55:43.910Z","locale":"en","sortValue":3}}},"variantTypes":{"data":[{"id":46,"attributes":{"name":"Standard","description":null,"createdAt":"2024-07-15T14:37:37.643Z","updatedAt":"2024-07-15T19:55:03.314Z","publishedAt":"2024-07-15T19:54:44.645Z","locale":"en","variantId":"01","foil":false,"sortValue":10,"icon":{"data":{"id":8701,"attributes":{"name":"icon_standard.png","alternativeText":null,"caption":null,"width":144,"height":144,"formats":null,"hash":"icon_standard_7dbd7cd8e6","ext":".png","mime":"image/png","size":0.39,"url":"https://cdn.starwarsunlimited.com//icon_standard_7dbd7cd8e6.png","previewUrl":null,"provider":"aws-s3","provider_metadata":null,"createdAt":"2024-07-15T14:40:17.066Z","updatedAt":"2024-07-15T14:40:17.066Z"}}}}}]},"variantOf":{"data":null},"reprintOf":{"data":null},"validationId":"2535372432"}}
+{
+  "id": 15421,
+  "attributes": {
+    "title": "Aggrieved Parliamentarian",
+    "subtitle": "",
+    "cardNumber": 252,
+    "cardCount": 257,
+    "artist": "Amad Mir",
+    "artFrontHorizontal": false,
+    "artBackHorizontal": null,
+    "hasFoil": true,
+    "cost": 2,
+    "hp": 2,
+    "power": 2,
+    "text": "When Played: Choose an opponent. They shuffle their discard pile and put it on the bottom of their deck.",
+    "textStyled": "<p><strong>When Played:</strong> Choose an opponent. They shuffle their discard pile and put it on the bottom of their deck.</p>",
+    "deployBox": null,
+    "deployBoxStyled": null,
+    "epicAction": null,
+    "epicActionStyled": null,
+    "linkHtml": "<a href=\"/cards?cid=2535372432\" class=\"card-tooltip\" data-card=\"2535372432\">Aggrieved Parliamentarian</a>",
+    "cardId": null,
+    "createdAt": "2024-08-09T21:48:46.174Z",
+    "updatedAt": "2024-10-24T04:21:45.614Z",
+    "publishedAt": "2024-10-24T06:00:00.000Z",
+    "locale": "en",
+    "hyperspace": false,
+    "unique": false,
+    "showcase": false,
+    "cardUid": "2535372432",
+    "rules": null,
+    "rulesStyled": null,
+    "serialCode": "0301252",
+    "upgradeHp": null,
+    "upgradePower": null,
+    "artFront": {
+      "data": {
+        "id": 19798,
+        "attributes": {
+          "name": "0301252EN_Aggrieved_Parliamentarian.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 300,
+          "height": 419,
+          "formats": {
+            "card": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//card_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png",
+              "hash": "card_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92",
+              "mime": "image/png",
+              "name": "card_0301252EN_Aggrieved_Parliamentarian.png",
+              "path": null,
+              "size": 187.94,
+              "width": 286,
+              "height": 400
+            },
+            "xsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png",
+              "hash": "xsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92",
+              "mime": "image/png",
+              "name": "xsmall_0301252EN_Aggrieved_Parliamentarian.png",
+              "path": null,
+              "size": 115.01,
+              "width": 215,
+              "height": 300
+            },
+            "xxsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xxsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png",
+              "hash": "xxsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92",
+              "mime": "image/png",
+              "name": "xxsmall_0301252EN_Aggrieved_Parliamentarian.png",
+              "path": null,
+              "size": 56.94,
+              "width": 143,
+              "height": 200
+            },
+            "xxxsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xxxsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png",
+              "hash": "xxxsmall_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92",
+              "mime": "image/png",
+              "name": "xxxsmall_0301252EN_Aggrieved_Parliamentarian.png",
+              "path": null,
+              "size": 34.47,
+              "width": 107,
+              "height": 150
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//thumbnail_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png",
+              "hash": "thumbnail_0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92",
+              "mime": "image/png",
+              "name": "thumbnail_0301252EN_Aggrieved_Parliamentarian.png",
+              "path": null,
+              "size": 84.4,
+              "width": 179,
+              "height": 250
+            }
+          },
+          "hash": "0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 56.7,
+          "url": "https://cdn.starwarsunlimited.com//0301252_EN_Aggrieved_Parliamentarian_52bb6d8f92.png",
+          "previewUrl": null,
+          "provider": "aws-s3",
+          "provider_metadata": null,
+          "createdAt": "2024-08-09T21:09:18.359Z",
+          "updatedAt": "2024-08-09T21:09:18.359Z"
+        }
+      }
+    },
+    "artBack": {
+      "data": null
+    },
+    "artThumbnail": {
+      "data": {
+        "id": 15211,
+        "attributes": {
+          "name": "0301252EN_Aggrieved_Parliamentarian_Thumbnail.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 300,
+          "height": 100,
+          "formats": {
+            "xxsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xxsmall_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385.png",
+              "hash": "xxsmall_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385",
+              "mime": "image/png",
+              "name": "xxsmall_0301252EN_Aggrieved_Parliamentarian_Thumbnail.png",
+              "path": null,
+              "size": 28.48,
+              "width": 200,
+              "height": 67
+            },
+            "xxxsmall": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//xxxsmall_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385.png",
+              "hash": "xxxsmall_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385",
+              "mime": "image/png",
+              "name": "xxxsmall_0301252EN_Aggrieved_Parliamentarian_Thumbnail.png",
+              "path": null,
+              "size": 17.18,
+              "width": 150,
+              "height": 50
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://cdn.starwarsunlimited.com//thumbnail_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385.png",
+              "hash": "thumbnail_0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385",
+              "mime": "image/png",
+              "name": "thumbnail_0301252EN_Aggrieved_Parliamentarian_Thumbnail.png",
+              "path": null,
+              "size": 41.55,
+              "width": 250,
+              "height": 83
+            }
+          },
+          "hash": "0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 17.21,
+          "url": "https://cdn.starwarsunlimited.com//0301252_EN_Aggrieved_Parliamentarian_Thumbnail_b070c54385.png",
+          "previewUrl": null,
+          "provider": "aws-s3",
+          "provider_metadata": null,
+          "createdAt": "2024-08-09T19:39:41.397Z",
+          "updatedAt": "2024-08-09T19:39:41.397Z"
+        }
+      }
+    },
+    "localizations": {
+      "data": [
+        {
+          "id": 15425,
+          "attributes": {
+            "title": "Parlamentare Afflitto",
+            "subtitle": "",
+            "cardNumber": 252,
+            "cardCount": 257,
+            "artist": "Amad Mir",
+            "artFrontHorizontal": false,
+            "artBackHorizontal": null,
+            "hasFoil": true,
+            "cost": 2,
+            "hp": 2,
+            "power": 2,
+            "text": "Quando Giocata: Scegli 1 avversario. Quell'avversario mescola la sua pila degli scarti e la mette in fondo al suo mazzo.",
+            "textStyled": "<p><strong>Quando Giocata:</strong> Scegli 1 avversario. Quell’avversario mescola la sua pila degli scarti e la mette in fondo al suo mazzo.</p>",
+            "deployBox": null,
+            "deployBoxStyled": null,
+            "epicAction": null,
+            "epicActionStyled": null,
+            "linkHtml": "<a href=\"/cards?cid=2535372432\" class=\"card-tooltip\" data-card=\"2535372432\">Parlamentare Afflitto</a>",
+            "cardId": "15421",
+            "createdAt": "2024-08-09T21:48:47.372Z",
+            "updatedAt": "2024-10-24T04:21:45.833Z",
+            "publishedAt": "2024-10-24T06:00:00.000Z",
+            "locale": "it",
+            "hyperspace": false,
+            "unique": false,
+            "showcase": false,
+            "cardUid": "2535372432",
+            "rules": null,
+            "rulesStyled": null,
+            "serialCode": "0301252",
+            "upgradeHp": null,
+            "upgradePower": null
+          }
+        },
+        {
+          "id": 15424,
+          "attributes": {
+            "title": "Parlementaire Lésé",
+            "subtitle": "",
+            "cardNumber": 252,
+            "cardCount": 257,
+            "artist": "Amad Mir",
+            "artFrontHorizontal": false,
+            "artBackHorizontal": null,
+            "hasFoil": true,
+            "cost": 2,
+            "hp": 2,
+            "power": 2,
+            "text": "Une fois jouée : choisissez un adversaire. Il mélange sa défausse et la place sous son deck.",
+            "textStyled": "<p><strong>Une fois jouée :</strong> choisissez un adversaire. Il mélange sa défausse et la place sous son deck.</p>",
+            "deployBox": null,
+            "deployBoxStyled": null,
+            "epicAction": null,
+            "epicActionStyled": null,
+            "linkHtml": "<a href=\"/cards?cid=2535372432\" class=\"card-tooltip\" data-card=\"2535372432\">Parlementaire Lésé</a>",
+            "cardId": "15421",
+            "createdAt": "2024-08-09T21:48:47.042Z",
+            "updatedAt": "2024-10-24T04:21:46.057Z",
+            "publishedAt": "2024-10-24T06:00:00.000Z",
+            "locale": "fr",
+            "hyperspace": false,
+            "unique": false,
+            "showcase": false,
+            "cardUid": "2535372432",
+            "rules": null,
+            "rulesStyled": null,
+            "serialCode": "0301252",
+            "upgradeHp": null,
+            "upgradePower": null
+          }
+        },
+        {
+          "id": 15423,
+          "attributes": {
+            "title": "Parlamentario ofendido",
+            "subtitle": "",
+            "cardNumber": 252,
+            "cardCount": 257,
+            "artist": "Amad Mir",
+            "artFrontHorizontal": false,
+            "artBackHorizontal": null,
+            "hasFoil": true,
+            "cost": 2,
+            "hp": 2,
+            "power": 2,
+            "text": "Cuando se juegue: Elige a un adversario. \nEse adversario baraja su pila de descartes y la coloca en la parte inferior de su mazo.",
+            "textStyled": "<p><strong>Cuando se juegue:</strong> Elige a un adversario.  Ese adversario baraja su pila de descartes y la coloca en la parte inferior de su mazo.</p>",
+            "deployBox": null,
+            "deployBoxStyled": null,
+            "epicAction": null,
+            "epicActionStyled": null,
+            "linkHtml": "<a href=\"/cards?cid=2535372432\" class=\"card-tooltip\" data-card=\"2535372432\">Parlamentario ofendido</a>",
+            "cardId": "15421",
+            "createdAt": "2024-08-09T21:48:46.737Z",
+            "updatedAt": "2024-10-24T04:21:46.281Z",
+            "publishedAt": "2024-10-24T06:00:00.000Z",
+            "locale": "es",
+            "hyperspace": false,
+            "unique": false,
+            "showcase": false,
+            "cardUid": "2535372432",
+            "rules": null,
+            "rulesStyled": null,
+            "serialCode": "0301252",
+            "upgradeHp": null,
+            "upgradePower": null
+          }
+        },
+        {
+          "id": 15422,
+          "attributes": {
+            "title": "Gekränkter Parlamentarier",
+            "subtitle": "",
+            "cardNumber": 252,
+            "cardCount": 257,
+            "artist": "Amad Mir",
+            "artFrontHorizontal": false,
+            "artBackHorizontal": null,
+            "hasFoil": true,
+            "cost": 2,
+            "hp": 2,
+            "power": 2,
+            "text": "Wenn gespielt: Wähle einen Gegner. \nEr mischt seinen Ablagestapel und legt \nihn unter sein Deck.",
+            "textStyled": "<p><strong>Wenn gespielt:</strong> Wähle einen Gegner.  Er mischt seinen Ablagestapel und legt  ihn unter sein Deck.</p>",
+            "deployBox": null,
+            "deployBoxStyled": null,
+            "epicAction": null,
+            "epicActionStyled": null,
+            "linkHtml": "<a href=\"/cards?cid=2535372432\" class=\"card-tooltip\" data-card=\"2535372432\">Gekränkter Parlamentarier</a>",
+            "cardId": "15421",
+            "createdAt": "2024-08-09T21:48:46.457Z",
+            "updatedAt": "2024-10-24T04:21:46.506Z",
+            "publishedAt": "2024-10-24T06:00:00.000Z",
+            "locale": "de",
+            "hyperspace": false,
+            "unique": false,
+            "showcase": false,
+            "cardUid": "2535372432",
+            "rules": null,
+            "rulesStyled": null,
+            "serialCode": "0301252",
+            "upgradeHp": null,
+            "upgradePower": null
+          }
+        }
+      ]
+    },
+    "aspects": {
+      "data": []
+    },
+    "aspectDuplicates": {
+      "data": []
+    },
+    "type": {
+      "data": {
+        "id": 9,
+        "attributes": {
+          "name": "Unit",
+          "description": "",
+          "value": "Unit",
+          "createdAt": "2023-08-14T21:42:29.466Z",
+          "updatedAt": "2024-04-25T13:52:29.760Z",
+          "publishedAt": "2023-11-15T17:31:08.061Z",
+          "locale": "en",
+          "sortValue": 3
+        }
+      }
+    },
+    "type2": {
+      "data": null
+    },
+    "traits": {
+      "data": [
+        {
+          "id": 172,
+          "attributes": {
+            "name": "Separatist",
+            "description": "",
+            "createdAt": "2023-11-14T00:01:42.999Z",
+            "updatedAt": "2023-11-21T17:07:02.874Z",
+            "publishedAt": "2023-11-16T00:00:31.539Z",
+            "locale": "en"
+          }
+        },
+        {
+          "id": 12,
+          "attributes": {
+            "name": "Official",
+            "description": "",
+            "createdAt": "2023-08-15T14:38:40.778Z",
+            "updatedAt": "2023-11-16T00:00:09.096Z",
+            "publishedAt": "2023-11-16T00:00:09.091Z",
+            "locale": "en"
+          }
+        }
+      ]
+    },
+    "arenas": {
+      "data": [
+        {
+          "id": 2,
+          "attributes": {
+            "name": "Ground",
+            "description": null,
+            "createdAt": "2023-08-15T14:32:07.804Z",
+            "updatedAt": "2023-08-18T21:37:34.527Z",
+            "publishedAt": "2023-08-18T21:37:34.522Z",
+            "locale": "en"
+          }
+        }
+      ]
+    },
+    "keywords": {
+      "data": []
+    },
+    "rarity": {
+      "data": {
+        "id": 2,
+        "attributes": {
+          "name": "Common",
+          "character": "C",
+          "color": "#964d02",
+          "createdAt": "2023-08-08T20:26:30.378Z",
+          "updatedAt": "2024-04-25T14:06:46.441Z",
+          "publishedAt": "2023-11-15T20:15:14.512Z",
+          "locale": "en",
+          "englishName": "Common",
+          "sortValue": 2
+        }
+      }
+    },
+    "expansion": {
+      "data": {
+        "id": 18,
+        "attributes": {
+          "name": "Twilight of the Republic",
+          "description": "",
+          "code": "TWI",
+          "createdAt": "2024-07-30T21:32:31.246Z",
+          "updatedAt": "2024-08-01T15:56:11.322Z",
+          "publishedAt": "2024-08-01T15:55:43.910Z",
+          "locale": "en",
+          "sortValue": 3
+        }
+      }
+    },
+    "variantTypes": {
+      "data": [
+        {
+          "id": 46,
+          "attributes": {
+            "name": "Standard",
+            "description": null,
+            "createdAt": "2024-07-15T14:37:37.643Z",
+            "updatedAt": "2024-07-15T19:55:03.314Z",
+            "publishedAt": "2024-07-15T19:54:44.645Z",
+            "locale": "en",
+            "variantId": "01",
+            "foil": false,
+            "sortValue": 10,
+            "icon": {
+              "data": {
+                "id": 8701,
+                "attributes": {
+                  "name": "icon_standard.png",
+                  "alternativeText": null,
+                  "caption": null,
+                  "width": 144,
+                  "height": 144,
+                  "formats": null,
+                  "hash": "icon_standard_7dbd7cd8e6",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "size": 0.39,
+                  "url": "https://cdn.starwarsunlimited.com//icon_standard_7dbd7cd8e6.png",
+                  "previewUrl": null,
+                  "provider": "aws-s3",
+                  "provider_metadata": null,
+                  "createdAt": "2024-07-15T14:40:17.066Z",
+                  "updatedAt": "2024-07-15T14:40:17.066Z"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "variantOf": {
+      "data": null
+    },
+    "reprintOf": {
+      "data": null
+    },
+    "validationId": "2535372432"
+  }
+}
