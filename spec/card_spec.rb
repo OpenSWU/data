@@ -10,7 +10,8 @@ RSpec.describe Card do
       card_number: 5,
       card_id: "2579145458",
       locale: "en",
-      artist: "Borja Pindado"
+      artist: "Borja Pindado",
+      expansion_code: "SOR"
     }
   }
 
@@ -20,4 +21,5 @@ RSpec.describe Card do
   its(:card_id) { is_expected.to eq valid_attributes[:card_id] }
   its(:locale) { is_expected.to eq valid_attributes[:locale] }
   its(:artist) { is_expected.to eq valid_attributes[:artist] }
+  its(:expansion_code) { is_expected.to eq valid_attributes[:expansion_code] }
 end

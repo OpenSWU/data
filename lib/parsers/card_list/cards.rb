@@ -38,7 +38,8 @@ module Parsers
           card_number: json["attributes"]["cardNumber"],
           card_id: json["attributes"]["cardId"] || json["attributes"]["cardUid"],
           locale: json["attributes"]["locale"],
-          artist: json["attributes"]["artist"]
+          artist: json["attributes"]["artist"],
+          expansion_code: json["attributes"]["expansion"]["code"]
         )
       end
     end
