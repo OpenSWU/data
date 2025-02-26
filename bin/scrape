@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "rubygems"
+require "bundler/setup"
+
+require "fileutils"
+
+require_relative "../lib/scrapers/card_list"
+
+cache_dir = "tmp/cache"
+FileUtils.mkdir cache_dir unless File.exist? cache_dir
+
+scraper = Scrapers::CardList.new
+scraper.scrape!
+scraper.cache_to_disk! cache_dir
