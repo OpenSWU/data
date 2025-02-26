@@ -3,6 +3,7 @@
 ruby file: ".ruby-version"
 source "https://rubygems.org"
 
+gem "csv", "~> 3.3"
 gem "faraday", "~> 2.12"
 gem "oj", "~> 3.16"
 

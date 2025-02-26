@@ -38,10 +38,10 @@ module Parsers
       def parse_to_expansion(filename)
         json = Oj.load_file(filename)
         ::Expansion.new(
-          code: json["attributes"]["expansion"]["code"],
-          name: json["attributes"]["expansion"]["name"],
-          description: json["attributes"]["expansion"]["description"],
-          locale: json["attributes"]["expansion"]["locale"],
+          code: json["attributes"]["expansion"]["data"]["attributes"]["code"],
+          name: json["attributes"]["expansion"]["data"]["attributes"]["name"],
+          description: json["attributes"]["expansion"]["data"]["attributes"]["description"],
+          locale: json["attributes"]["expansion"]["data"]["attributes"]["locale"],
           card_count: json["attributes"]["cardCount"]
         )
       end
