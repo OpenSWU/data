@@ -5,7 +5,6 @@ RSpec.describe Expansion do
   subject(:card) { Expansion.new(*valid_attributes.values) }
   let(:valid_attributes) {
     {
-      id: Digest::UUID.uuid_v5(Digest::UUID::OID_NAMESPACE, "SHD-en-262"),
       code: "SHD",
       name: "Shadows of the Galaxy",
       description: "",
