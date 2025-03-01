@@ -5,6 +5,7 @@ source "https://rubygems.org"
 
 gem "csv", "~> 3.3"
 gem "faraday", "~> 2.12"
+gem "irb", "~> 1.15"
 gem "oj", "~> 3.16"
 
 group :development, :test do
