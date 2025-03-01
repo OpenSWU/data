@@ -1,5 +1,3 @@
-require "active_support/core_ext/object/blank"
-require "active_support/core_ext/digest/uuid"
 require "oj"
 require "data"
 

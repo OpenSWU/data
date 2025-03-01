@@ -11,7 +11,8 @@ RSpec.describe Card do
       card_id: "2579145458",
       locale: "en",
       artist: "Borja Pindado",
-      expansion_code: "SOR"
+      expansion_code: "SOR",
+      card_count: 252
     }
   }
 
@@ -22,4 +23,6 @@ RSpec.describe Card do
   its(:locale) { is_expected.to eq valid_attributes[:locale] }
   its(:artist) { is_expected.to eq valid_attributes[:artist] }
   its(:expansion_code) { is_expected.to eq valid_attributes[:expansion_code] }
+  its(:card_count) { is_expected.to eq valid_attributes[:card_count] }
+  its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(Digest::UUID::OID_NAMESPACE, "SOR-en-252") }
 end
