@@ -3,6 +3,7 @@
 ruby file: ".ruby-version"
 source "https://rubygems.org"
 
+gem "activesupport", "~> 8.0", require: false
 gem "csv", "~> 3.3"
 gem "faraday", "~> 2.12"
 gem "irb", "~> 1.15"
