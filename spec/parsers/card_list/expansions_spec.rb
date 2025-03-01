@@ -15,7 +15,7 @@ RSpec.describe Parsers::CardList::Expansions do
 
     it { is_expected.to be_a Parsers::CardList::Expansions }
     its(:size) { is_expected.to eq 3 }
-    its(:count) { is_expected.to eq 2 }
+    its(:count) { is_expected.to eq 3 }
   end
 
   describe "#load_cache" do

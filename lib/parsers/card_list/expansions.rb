@@ -1,3 +1,5 @@
+require "active_support/core_ext/object/blank"
+require "active_support/core_ext/digest/uuid"
 require "oj"
 require "data"
 
@@ -37,12 +39,18 @@ module Parsers
 
       def parse_to_expansion(filename)
         json = Oj.load_file(filename)
+
+        card_count = json["attributes"]["cardCount"]
+        code = json["attributes"]["expansion"]["data"]["attributes"]["code"]
+        locale = json["attributes"]["expansion"]["data"]["attributes"]["locale"]
+
         ::Expansion.new(
-          code: json["attributes"]["expansion"]["data"]["attributes"]["code"],
+          id: Digest::UUID.uuid_v5(Digest::UUID::OID_NAMESPACE, "#{code}-#{locale}-#{card_count}"),
+          code: code,
           name: json["attributes"]["expansion"]["data"]["attributes"]["name"],
           description: json["attributes"]["expansion"]["data"]["attributes"]["description"],
-          locale: json["attributes"]["expansion"]["data"]["attributes"]["locale"],
-          card_count: json["attributes"]["cardCount"]
+          locale: locale,
+          card_count: card_count
         )
       end
     end
