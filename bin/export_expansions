@@ -25,9 +25,9 @@ puts "\n#{parser.count} Expansions to Export"
 
 # Write to CSV
 CSV.open(export_file, "wb") do |csv|
-  csv << %w[expansion_code name description card_count locale]
+  csv << %w[id expansion_code name description card_count locale]
   parser.each do |expansion|
-    csv << [expansion.code, expansion.name, expansion.description, expansion.card_count, expansion.locale]
+    csv << [expansion.id, expansion.code, expansion.name, expansion.description, expansion.card_count, expansion.locale]
   end
 end
 
