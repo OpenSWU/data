@@ -13,7 +13,7 @@ RSpec.describe Expansion do
     }
   }
 
-  its(:id) { is_expected.to eq Digest::UUID.uuid_v5(Digest::UUID::OID_NAMESPACE, "SHD-en-262") }
+  its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "SHD-en-262") }
   its(:code) { is_expected.to eq valid_attributes[:code] }
   its(:name) { is_expected.to eq valid_attributes[:name] }
   its(:description) { is_expected.to eq valid_attributes[:description] }
