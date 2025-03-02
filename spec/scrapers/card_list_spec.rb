@@ -9,6 +9,11 @@ RSpec.describe Scrapers::CardList do
   let(:stubs) { Faraday::Adapter::Test::Stubs.new(strict_mode: true) }
   let(:connection) { Faraday.new { |b| b.adapter(:test, stubs) } }
 
+  it "sets up a new connection to the SWU API" do
+    expect(Faraday).to receive(:new).with("https://admin.starwarsunlimited.com")
+    described_class.new
+  end
+
   before do
     stubs.get("/api/card-list?locale=en&filters[variantOf][id][$null]=true&pagination[page]=1&pagination[pageSize]=50") do |env|
       [

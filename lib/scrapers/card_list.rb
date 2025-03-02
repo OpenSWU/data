@@ -28,7 +28,8 @@ module Scrapers
     end
 
     def cache_to_disk!(cache_dir = Dir.mktmpdir)
-      Dir.mkdir("#{cache_dir}/openswu-data") unless Dir.exist?("#{cache_dir}/openswu-data")
+      Dir.exist?("#{cache_dir}/openswu-data") or
+        Dir.mkdir("#{cache_dir}/openswu-data")
 
       results.each do |result|
         filename = result["attributes"]["cardUid"] || result["attributes"]["cardId"]
