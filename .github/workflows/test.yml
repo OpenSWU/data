@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  checks: write
 
 jobs:
   rspec:
@@ -20,3 +21,6 @@ jobs:
         bundler-cache: true
     - name: Run RSpec Suite
       run: bin/rspec
+    - uses: joshmfrankel/simplecov-check-action@main
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
