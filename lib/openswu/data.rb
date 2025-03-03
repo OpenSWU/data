@@ -50,5 +50,11 @@ module OpenSWU
         Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "trait:#{name}-#{locale}")
       end
     end
+
+    Type = ::Data.define(:name, :description, :value, :locale) do
+      def id
+        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "type:#{name}-#{locale}")
+      end
+    end
   end
 end
