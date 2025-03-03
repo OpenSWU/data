@@ -3,6 +3,12 @@ require "openswu"
 require "active_support/core_ext/object/blank"
 require "active_support/core_ext/digest/uuid"
 
+Arena = Data.define(:name, :description, :locale) do
+  def id
+    Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "arena:#{name}-#{locale}")
+  end
+end
+
 Aspect = Data.define(:name, :description, :color, :locale, :english_name) do
   def id
     Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "aspect:#{name}-#{locale}")
