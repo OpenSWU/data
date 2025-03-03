@@ -1,5 +1,5 @@
 require "oj"
-require "data"
+require "openswu/data"
 
 module Parsers
   module CardList
@@ -32,7 +32,7 @@ module Parsers
 
       def parse_to_card(filename)
         json = Oj.load_file(filename)
-        ::Card.new(
+        OpenSWU::Data::Card.new(
           title: json["attributes"]["title"],
           subtitle: json["attributes"]["subtitle"],
           card_number: json["attributes"]["cardNumber"],

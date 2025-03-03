@@ -30,7 +30,7 @@ RSpec.describe Parsers::CardList::Cards do
     subject(:parser) { described_class.load_cache cache_dir }
 
     it "returns each card as a Card" do
-      expect(parser).to all(be_a Card)
+      expect(parser).to all(be_a OpenSWU::Data::Card)
     end
   end
 end

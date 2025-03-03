@@ -1,8 +1,8 @@
 require "spec_helper"
-require "data"
+require "openswu/data"
 
-RSpec.describe Aspect do
-  subject(:card) { Aspect.new(*valid_attributes.values) }
+RSpec.describe OpenSWU::Data::Aspect do
+  subject(:card) { OpenSWU::Data::Aspect.new(*valid_attributes.values) }
   let(:valid_attributes) {
     {
       name: "Command",

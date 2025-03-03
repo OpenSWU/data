@@ -1,8 +1,8 @@
 require "spec_helper"
-require "data"
+require "openswu/data"
 
-RSpec.describe Card do
-  subject(:card) { Card.new(*valid_attributes.values) }
+RSpec.describe OpenSWU::Data::Card do
+  subject(:card) { OpenSWU::Data::Card.new(*valid_attributes.values) }
   let(:valid_attributes) {
     {
       title: "Luke Skywalker",

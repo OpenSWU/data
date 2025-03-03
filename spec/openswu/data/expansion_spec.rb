@@ -1,8 +1,8 @@
 require "spec_helper"
-require "data"
+require "openswu/data"
 
-RSpec.describe Expansion do
-  subject(:card) { Expansion.new(*valid_attributes.values) }
+RSpec.describe OpenSWU::Data::Expansion do
+  subject(:card) { OpenSWU::Data::Expansion.new(*valid_attributes.values) }
   let(:valid_attributes) {
     {
       code: "SHD",

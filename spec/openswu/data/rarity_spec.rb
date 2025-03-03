@@ -1,8 +1,8 @@
 require "spec_helper"
-require "data"
+require "openswu/data"
 
-RSpec.describe Rarity do
-  subject(:card) { Rarity.new(*valid_attributes.values) }
+RSpec.describe OpenSWU::Data::Rarity do
+  subject(:card) { OpenSWU::Data::Rarity.new(*valid_attributes.values) }
   let(:valid_attributes) {
     {
       name: "Rare",
