@@ -24,3 +24,9 @@ Expansion = Data.define(:code, :name, :description, :locale, :card_count) do
     Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:" + [code, locale, card_count].join("-"))
   end
 end
+
+Rarity = Data.define(:name, :character, :color, :locale, :english_name) do
+  def id
+    Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "rarity:#{name}")
+  end
+end
