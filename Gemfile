@@ -8,6 +8,7 @@ gem "csv", "~> 3.3"
 gem "faraday", "~> 2.12"
 gem "irb", "~> 1.15"
 gem "oj", "~> 3.16"
+gem "progress_bar", "~> 1.3", require: false
 
 group :development, :test do
   gem "rspec", "~> 3.13"

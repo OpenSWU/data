@@ -1,10 +1,10 @@
 require "spec_helper"
 require "fileutils"
-require "tmpdir"
 require "scrapers/card_list"
 
 RSpec.describe Scrapers::CardList do
-  subject(:scraper) { described_class.new(connection) }
+  subject(:scraper) { described_class.new(connection: connection, cache_dir: cache_dir) }
+  let!(:cache_dir) { Dir.mktmpdir }
   let(:results) { scraper.results }
   let(:stubs) { Faraday::Adapter::Test::Stubs.new(strict_mode: true) }
   let(:connection) { Faraday.new { |b| b.adapter(:test, stubs) } }
@@ -34,38 +34,18 @@ RSpec.describe Scrapers::CardList do
 
   after do
     Faraday.default_connection = nil
+    FileUtils.remove_entry(cache_dir)
   end
 
   describe "#scrape!" do
-    it "populates #results with card details" do
+    it "writes card details to individual JSON files" do
       expect {
         scraper.scrape!
       }.to change {
-        scraper.results.size
+        Dir["#{cache_dir}/openswu-data/*.json"].length
       }.from(0).to(100)
-
-      expect(results).to be_a(Set).and(all(be_a Hash))
-      expect(results).to include(hash_including({"id" => 5, "attributes" => hash_including({"title" => "Luke Skywalker"})}))
-      expect(results).to include(hash_including({"id" => 344, "attributes" => hash_including({"title" => "Colonel Yularen"})}))
 
       stubs.verify_stubbed_calls
-    end
-  end
-
-  describe "#cache_to_disk!" do
-    let!(:temp_folder) { Dir.mktmpdir }
-
-    after do
-      FileUtils.remove_entry(temp_folder)
-    end
-
-    it "creates a cache file for each result" do
-      expect {
-        scraper.scrape!
-        scraper.cache_to_disk!(temp_folder)
-      }.to change {
-        Dir["#{temp_folder}/openswu-data/*.json"].length
-      }.from(0).to(100)
     end
   end
 end

@@ -1,14 +1,14 @@
 require "faraday"
 require "oj"
+require "progress_bar"
+require "tmpdir"
 
 module Scrapers
   class CardList
-    def initialize(connection = nil)
+    def initialize(connection: nil, cache_dir: Dir.mktmpdir)
       @connection = connection || new_connection
-    end
-
-    def results
-      @results ||= Set.new
+      @cache_dir = cache_dir
+      set_up_cache
     end
 
     def scrape!
@@ -16,6 +16,7 @@ module Scrapers
 
       page["meta"]["pagination"]["total"]
       additional_pages = page["meta"]["pagination"]["pageCount"].to_i - 1
+      progress = ProgressBar.new(additional_pages)
 
       extract_card_data(page["data"])
 
@@ -24,24 +25,26 @@ module Scrapers
         page = fetch_page(page_number)
 
         extract_card_data(page["data"])
-      end
-    end
-
-    def cache_to_disk!(cache_dir = Dir.mktmpdir)
-      Dir.exist?("#{cache_dir}/openswu-data") or
-        Dir.mkdir("#{cache_dir}/openswu-data")
-
-      results.each do |result|
-        filename = result["attributes"]["cardUid"] || result["attributes"]["cardId"]
-        File.write("#{cache_dir}/openswu-data/#{filename}.json", result.to_json)
+        progress.increment!
       end
     end
 
     private
 
+    def cache_to_disk!(result)
+      filename = result["attributes"]["cardUid"] || result["attributes"]["cardId"]
+      File.write("#{@cache_dir}/openswu-data/#{filename}.json", result.to_json)
+    end
+
+    def default_params
+      {
+        locale: "en"
+      }
+    end
+
     def extract_card_data(data)
       data.each do |card_detail|
-        results.add card_detail
+        cache_to_disk! card_detail
       end
     end
 
@@ -65,10 +68,9 @@ module Scrapers
       "/api/card-list"
     end
 
-    def default_params
-      {
-        locale: "en"
-      }
+    def set_up_cache
+      Dir.exist?("#{@cache_dir}/openswu-data") or
+        Dir.mkdir("#{@cache_dir}/openswu-data")
     end
   end
 end
