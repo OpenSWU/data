@@ -19,7 +19,8 @@ module OpenSWU
 
     Card = ::Data.define(:title, :subtitle, :card_number, :card_id, :locale, :artist, :expansion_code,
       :card_count, :front_art_url, :front_art_horizontal, :back_art_url, :back_art_horizontal, :has_foil_printing,
-      :hyperspace_printing, :showcase_printing) do
+      :hyperspace_printing, :showcase_printing, :play_cost, :base_hp, :base_power, :unique, :upgrade_hp,
+      :upgrade_power) do
       def id
         Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "card:" + [expansion_code, locale, card_number, card_count].join("-"))
       end

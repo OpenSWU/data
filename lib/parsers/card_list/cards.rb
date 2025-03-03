@@ -47,7 +47,13 @@ module Parsers
           back_art_horizontal: !!json["attributes"]["artBackHorizontal"],
           has_foil_printing: json["attributes"]["hasFoil"],
           hyperspace_printing: json["attributes"]["hyperspace"],
-          showcase_printing: json["attributes"]["showcase"]
+          showcase_printing: json["attributes"]["showcase"],
+          play_cost: json["attributes"]["cost"],
+          base_hp: json["attributes"]["hp"],
+          base_power: json["attributes"]["power"],
+          unique: json["attributes"]["unique"],
+          upgrade_hp: json["attributes"]["upgradeHp"],
+          upgrade_power: json["attributes"]["upgradePower"]
         )
       end
     end

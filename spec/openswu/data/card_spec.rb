@@ -19,7 +19,13 @@ RSpec.describe OpenSWU::Data::Card do
       back_art_horizontal: nil,
       has_foil_printing: false,
       hyperspace_printing: false,
-      showcase_printing: false
+      showcase_printing: false,
+      play_cost: 6,
+      base_hp: 6,
+      base_power: 4,
+      unique: true,
+      upgrade_hp: nil,
+      upgrade_power: nil
     }
   }
 
@@ -39,5 +45,11 @@ RSpec.describe OpenSWU::Data::Card do
   its(:has_foil_printing) { is_expected.to eq valid_attributes[:has_foil_printing] }
   its(:hyperspace_printing) { is_expected.to eq valid_attributes[:hyperspace_printing] }
   its(:showcase_printing) { is_expected.to eq valid_attributes[:showcase_printing] }
+  its(:play_cost) { is_expected.to eq valid_attributes[:play_cost] }
+  its(:base_hp) { is_expected.to eq valid_attributes[:base_hp] }
+  its(:base_power) { is_expected.to eq valid_attributes[:base_power] }
+  its(:unique) { is_expected.to eq valid_attributes[:unique] }
+  its(:upgrade_hp) { is_expected.to eq valid_attributes[:upgrade_hp] }
+  its(:upgrade_power) { is_expected.to eq valid_attributes[:upgrade_power] }
   its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:SOR-en-252") }
 end
