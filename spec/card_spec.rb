@@ -16,7 +16,7 @@ RSpec.describe Card do
     }
   }
 
-  its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "SOR-en-5-252") }
+  its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "card:SOR-en-5-252") }
   its(:title) { is_expected.to eq valid_attributes[:title] }
   its(:subtitle) { is_expected.to eq valid_attributes[:subtitle] }
   its(:card_number) { is_expected.to eq valid_attributes[:card_number] }
@@ -25,5 +25,5 @@ RSpec.describe Card do
   its(:artist) { is_expected.to eq valid_attributes[:artist] }
   its(:expansion_code) { is_expected.to eq valid_attributes[:expansion_code] }
   its(:card_count) { is_expected.to eq valid_attributes[:card_count] }
-  its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "SOR-en-252") }
+  its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:SOR-en-252") }
 end
