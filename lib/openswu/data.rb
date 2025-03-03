@@ -44,5 +44,11 @@ module OpenSWU
         Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "rarity:#{name}-#{locale}")
       end
     end
+
+    Trait = ::Data.define(:name, :description, :locale) do
+      def id
+        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "trait:#{name}-#{locale}")
+      end
+    end
   end
 end
