@@ -5,7 +5,7 @@ require "active_support/core_ext/digest/uuid"
 
 Aspect = Data.define(:name, :description, :color, :locale, :english_name) do
   def id
-    Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "aspect:#{name}")
+    Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "aspect:#{name}-#{locale}")
   end
 end
 
@@ -25,8 +25,14 @@ Expansion = Data.define(:code, :name, :description, :locale, :card_count) do
   end
 end
 
+Keyword = Data.define(:name, :description, :locale) do
+  def id
+    Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "keyword:#{name}-#{locale}")
+  end
+end
+
 Rarity = Data.define(:name, :character, :color, :locale, :english_name) do
   def id
-    Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "rarity:#{name}")
+    Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "rarity:#{name}-#{locale}")
   end
 end

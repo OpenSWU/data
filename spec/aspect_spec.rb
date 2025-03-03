@@ -13,7 +13,7 @@ RSpec.describe Aspect do
     }
   }
 
-  its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "aspect:Command") }
+  its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "aspect:Command-en") }
   its(:name) { is_expected.to eq valid_attributes[:name] }
   its(:description) { is_expected.to eq valid_attributes[:description] }
   its(:color) { is_expected.to eq valid_attributes[:color] }

@@ -13,7 +13,7 @@ RSpec.describe Rarity do
     }
   }
 
-  its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "rarity:Rare") }
+  its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "rarity:Rare-en") }
   its(:name) { is_expected.to eq valid_attributes[:name] }
   its(:character) { is_expected.to eq valid_attributes[:character] }
   its(:color) { is_expected.to eq valid_attributes[:color] }
