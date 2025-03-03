@@ -40,7 +40,9 @@ module Parsers
           locale: json["attributes"]["locale"],
           artist: json["attributes"]["artist"],
           expansion_code: json["attributes"]["expansion"]["data"]["attributes"]["code"],
-          card_count: json["attributes"]["cardCount"]
+          card_count: json["attributes"]["cardCount"],
+          front_art_url: json["attributes"]["artFront"]["data"]["attributes"]["url"],
+          back_art_url: json["attributes"]["artBack"]["data"]&.[]("attributes")&.[]("url")
         )
       end
     end

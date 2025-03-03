@@ -17,7 +17,8 @@ module OpenSWU
       end
     end
 
-    Card = ::Data.define(:title, :subtitle, :card_number, :card_id, :locale, :artist, :expansion_code, :card_count) do
+    Card = ::Data.define(:title, :subtitle, :card_number, :card_id, :locale, :artist, :expansion_code,
+      :card_count, :front_art_url, :back_art_url) do
       def id
         Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "card:" + [expansion_code, locale, card_number, card_count].join("-"))
       end

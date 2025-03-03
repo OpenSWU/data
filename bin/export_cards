@@ -25,9 +25,10 @@ puts "\n#{parser.size} Cards to Export"
 
 # Write to CSV
 CSV.open(export_file, "wb") do |csv|
-  csv << %w[id swu_card_id title subtitle card_number locale artist expansion_id]
+  csv << %w[id swu_card_id title subtitle card_number locale artist expansion_id front_art_url back_art_url]
   parser.each do |card|
-    csv << [card.id, card.card_id, card.title, card.subtitle, card.card_number, card.locale, card.artist, card.expansion_id]
+    csv << [card.id, card.card_id, card.title, card.subtitle, card.card_number, card.locale, card.artist,
+            card.expansion_id, card.front_art_url, card.back_art_url]
   end
 end
 
