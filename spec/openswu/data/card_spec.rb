@@ -14,7 +14,10 @@ RSpec.describe OpenSWU::Data::Card do
       expansion_code: "SOR",
       card_count: 252,
       front_art_url: "https://cdn.starwarsunlimited.com/example.png",
-      back_art_url: nil
+      front_art_horizontal: false,
+      back_art_url: nil,
+      back_art_horizontal: nil
+
     }
   }
 
@@ -28,6 +31,8 @@ RSpec.describe OpenSWU::Data::Card do
   its(:expansion_code) { is_expected.to eq valid_attributes[:expansion_code] }
   its(:card_count) { is_expected.to eq valid_attributes[:card_count] }
   its(:front_art_url) { is_expected.to eq valid_attributes[:front_art_url] }
+  its(:front_art_horizontal) { is_expected.to eq valid_attributes[:front_art_horizontal] }
   its(:back_art_url) { is_expected.to eq valid_attributes[:back_art_url] }
+  its(:back_art_horizontal) { is_expected.to eq valid_attributes[:back_art_horizontal] }
   its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:SOR-en-252") }
 end

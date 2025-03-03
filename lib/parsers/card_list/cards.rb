@@ -42,7 +42,9 @@ module Parsers
           expansion_code: json["attributes"]["expansion"]["data"]["attributes"]["code"],
           card_count: json["attributes"]["cardCount"],
           front_art_url: json["attributes"]["artFront"]["data"]["attributes"]["url"],
-          back_art_url: json["attributes"]["artBack"]["data"]&.[]("attributes")&.[]("url")
+          front_art_horizontal: !!json["attributes"]["artFrontHorizontal"],
+          back_art_url: json["attributes"]["artBack"]["data"]&.[]("attributes")&.[]("url"),
+          back_art_horizontal: !!json["attributes"]["artBackHorizontal"]
         )
       end
     end
