@@ -16,8 +16,10 @@ RSpec.describe OpenSWU::Data::Card do
       front_art_url: "https://cdn.starwarsunlimited.com/example.png",
       front_art_horizontal: false,
       back_art_url: nil,
-      back_art_horizontal: nil
-
+      back_art_horizontal: nil,
+      has_foil_printing: false,
+      hyperspace_printing: false,
+      showcase_printing: false
     }
   }
 
@@ -34,5 +36,8 @@ RSpec.describe OpenSWU::Data::Card do
   its(:front_art_horizontal) { is_expected.to eq valid_attributes[:front_art_horizontal] }
   its(:back_art_url) { is_expected.to eq valid_attributes[:back_art_url] }
   its(:back_art_horizontal) { is_expected.to eq valid_attributes[:back_art_horizontal] }
+  its(:has_foil_printing) { is_expected.to eq valid_attributes[:has_foil_printing] }
+  its(:hyperspace_printing) { is_expected.to eq valid_attributes[:hyperspace_printing] }
+  its(:showcase_printing) { is_expected.to eq valid_attributes[:showcase_printing] }
   its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:SOR-en-252") }
 end

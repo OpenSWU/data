@@ -44,7 +44,10 @@ module Parsers
           front_art_url: json["attributes"]["artFront"]["data"]["attributes"]["url"],
           front_art_horizontal: !!json["attributes"]["artFrontHorizontal"],
           back_art_url: json["attributes"]["artBack"]["data"]&.[]("attributes")&.[]("url"),
-          back_art_horizontal: !!json["attributes"]["artBackHorizontal"]
+          back_art_horizontal: !!json["attributes"]["artBackHorizontal"],
+          has_foil_printing: json["attributes"]["hasFoil"],
+          hyperspace_printing: json["attributes"]["hyperspace"],
+          showcase_printing: json["attributes"]["showcase"]
         )
       end
     end
