@@ -15,7 +15,7 @@ RSpec.describe Scrapers::CardList do
   end
 
   before do
-    stubs.get("/api/card-list?locale=en&filters[variantOf][id][$null]=true&pagination[page]=1&pagination[pageSize]=50") do |env|
+    stubs.get("/api/card-list?locale=en&pagination[page]=1&pagination[pageSize]=50") do |env|
       [
         200,
         {"Content-Type": "application/javascript"},
@@ -23,7 +23,7 @@ RSpec.describe Scrapers::CardList do
       ]
     end
 
-    stubs.get("/api/card-list?locale=en&filters[variantOf][id][$null]=true&pagination[page]=2&pagination[pageSize]=50") do |_env|
+    stubs.get("/api/card-list?locale=en&pagination[page]=2&pagination[pageSize]=50") do |_env|
       [
         200,
         {"Content-Type": "application/javascript"},

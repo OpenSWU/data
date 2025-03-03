@@ -67,14 +67,7 @@ module Scrapers
 
     def default_params
       {
-        locale: "en",
-        filters: {
-          variantOf: {
-            id: {
-              "$null" => true
-            }
-          }
-        }
+        locale: "en"
       }
     end
   end
