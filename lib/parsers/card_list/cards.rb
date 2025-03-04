@@ -1,34 +1,15 @@
-require "oj"
-require "openswu/data"
+require "parsers/card_list/base_parser"
 
 module Parsers
   module CardList
-    class Cards
-      include Enumerable
-
+    class Cards < BaseParser
       def each
         Dir["#{cache_dir}*.json"].each do |filename|
           yield parse_to_card(filename)
         end
       end
 
-      def self.load_cache(cache_dir)
-        parser = new
-        parser.load_cache cache_dir
-        parser
-      end
-
-      def load_cache(cache_dir)
-        @cache_dir = cache_dir
-      end
-
-      def size
-        Dir["#{cache_dir}*.json"].count
-      end
-
       private
-
-      attr_reader :cache_dir
 
       def parse_to_card(filename)
         json = Oj.load_file(filename)
