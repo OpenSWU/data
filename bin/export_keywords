@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+libdir = File.expand_path(File.dirname(__FILE__) + '/../lib')
+$LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
+
+require "rubygems"
+require "bundler/setup"
+
+require "csv"
+require "parsers/card_list/keywords"
+
+cache_dir = "tmp/cache/openswu-data/"
+export_dir = "tmp/exports/"
+export_file = "#{export_dir}keywords.csv"
+
+# Ensure the export directory exists
+Dir.mkdir(export_dir) unless Dir.exist?(export_dir)
+
+parser = Parsers::CardList::Keywords.load_cache(cache_dir)
+
+puts "=" * 80
+puts "  OpenSWU Data — Export Keywords"
+puts "=" * 80
+puts "\n#{parser.count} Keywords to Export"
+
+# Write to CSV
+CSV.open(export_file, "wb") do |csv|
+  csv << %w[id name description locale]
+  parser.each do |keyword|
+    csv << [keyword.id, keyword.name, keyword.description, keyword.locale]
+  end
+end
+
+puts "\nKeywords exported to #{export_file}"
