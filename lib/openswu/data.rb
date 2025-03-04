@@ -5,15 +5,20 @@ require "active_support/core_ext/digest/uuid"
 
 module OpenSWU
   module Data
+    def self.uuid(namespace, *name_parts)
+      value = name_parts.join("-")
+      Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "#{namespace}:#{value}")
+    end
+
     Arena = ::Data.define(:name, :description, :locale) do
       def id
-        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "arena:#{name}-#{locale}")
+        Data.uuid("arena", name, locale)
       end
     end
 
     Aspect = ::Data.define(:name, :description, :color, :locale, :english_name) do
       def id
-        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "aspect:#{name}-#{locale}")
+        Data.uuid("aspect", name, locale)
       end
     end
 
@@ -22,41 +27,41 @@ module OpenSWU
       :hyperspace_printing, :showcase_printing, :play_cost, :base_hp, :base_power, :unique, :upgrade_hp,
       :upgrade_power) do
       def id
-        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "card:" + [expansion_code, locale, card_number, card_count].join("-"))
+        Data.uuid("card", expansion_code, locale, card_number, card_count)
       end
 
       def expansion_id
-        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:" + [expansion_code, locale, card_count].join("-"))
+        Data.uuid("expansion", expansion_code, locale, card_count)
       end
     end
 
     Expansion = ::Data.define(:code, :name, :description, :locale, :card_count) do
       def id
-        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:" + [code, locale, card_count].join("-"))
+        Data.uuid("expansion", code, locale, card_count)
       end
     end
 
     Keyword = ::Data.define(:name, :description, :locale) do
       def id
-        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "keyword:#{name}-#{locale}")
+        Data.uuid("keyword", name, locale)
       end
     end
 
     Rarity = ::Data.define(:name, :character, :color, :locale, :english_name) do
       def id
-        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "rarity:#{name}-#{locale}")
+        Data.uuid("rarity", name, locale)
       end
     end
 
     Trait = ::Data.define(:name, :description, :locale) do
       def id
-        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "trait:#{name}-#{locale}")
+        Data.uuid("trait", name, locale)
       end
     end
 
     Type = ::Data.define(:name, :description, :value, :locale) do
       def id
-        Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "type:#{name}-#{locale}")
+        Data.uuid("type", name, locale)
       end
     end
   end
