@@ -25,7 +25,8 @@ RSpec.describe OpenSWU::Data::Card do
       base_power: 4,
       unique: true,
       upgrade_hp: nil,
-      upgrade_power: nil
+      upgrade_power: nil,
+      rarity_id: OpenSWU::Data.uuid("rarity", "Common", "en")
     }
   }
 
@@ -51,5 +52,6 @@ RSpec.describe OpenSWU::Data::Card do
   its(:unique) { is_expected.to eq valid_attributes[:unique] }
   its(:upgrade_hp) { is_expected.to eq valid_attributes[:upgrade_hp] }
   its(:upgrade_power) { is_expected.to eq valid_attributes[:upgrade_power] }
+  its(:rarity_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "rarity:Common-en") }
   its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:SOR-en-252") }
 end

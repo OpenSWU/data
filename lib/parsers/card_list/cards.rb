@@ -34,8 +34,13 @@ module Parsers
           base_power: json["attributes"]["power"],
           unique: json["attributes"]["unique"],
           upgrade_hp: json["attributes"]["upgradeHp"],
-          upgrade_power: json["attributes"]["upgradePower"]
+          upgrade_power: json["attributes"]["upgradePower"],
+          rarity_id: parse_rarity_id(json["attributes"]["rarity"]["data"]["attributes"])
         )
+      end
+
+      def parse_rarity_id(json)
+        ::OpenSWU::Data.uuid("rarity", json["name"], json["locale"])
       end
     end
   end
