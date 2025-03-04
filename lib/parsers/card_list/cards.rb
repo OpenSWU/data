@@ -39,7 +39,9 @@ module Parsers
           front_type_id: parse_type_id(json["attributes"]["type"]["data"]["attributes"]),
           back_type_id: parse_type_id(json["attributes"]["type2"]["data"]&.[]("attributes")),
           aspect_ids: parse_aspect_ids(json["attributes"]["aspects"]["data"], json["attributes"]["aspectDuplicates"]["data"]),
-          arena_ids: parse_arena_ids(json["attributes"]["arenas"]["data"])
+          arena_ids: parse_arena_ids(json["attributes"]["arenas"]["data"]),
+          trait_ids: parse_trait_ids(json["attributes"]["traits"]["data"]),
+          keyword_ids: parse_keyword_ids(json["attributes"]["keywords"]["data"])
         )
       end
 
@@ -57,8 +59,20 @@ module Parsers
         })
       end
 
+      def parse_keyword_ids(json)
+        json.collect do |keywords|
+          ::OpenSWU::Data.uuid("arena", keywords["attributes"]["name"], keywords["attributes"]["locale"])
+        end
+      end
+
       def parse_rarity_id(json)
         ::OpenSWU::Data.uuid("rarity", json["name"], json["locale"])
+      end
+
+      def parse_trait_ids(json)
+        json.collect do |trait|
+          ::OpenSWU::Data.uuid("arena", trait["attributes"]["name"], trait["attributes"]["locale"])
+        end
       end
 
       def parse_type_id(json = nil)

@@ -35,6 +35,12 @@ RSpec.describe OpenSWU::Data::Card do
       ],
       arena_ids: [
         OpenSWU::Data.uuid("arena", "Ground", "en")
+      ],
+      trait_ids: [
+        OpenSWU::Data.uuid("trait", "Rebel", "en")
+      ],
+      keyword_ids: [
+        OpenSWU::Data.uuid("keyword", "Sentinel", "en")
       ]
     }
   }
@@ -45,6 +51,8 @@ RSpec.describe OpenSWU::Data::Card do
     ]
   end
   let(:expected_arena_ids) { [Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "arena:Ground-en")] }
+  let(:expected_trait_ids) { [Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "trait:Rebel-en")] }
+  let(:expected_keyword_ids) { [Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "keyword:Sentinel-en")] }
 
   its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "card:SOR-en-5-252") }
   its(:title) { is_expected.to eq valid_attributes[:title] }
@@ -73,5 +81,7 @@ RSpec.describe OpenSWU::Data::Card do
   its(:back_type_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "type:Leader Unit-en") }
   its(:aspect_ids) { is_expected.to include(*expected_aspect_ids) }
   its(:arena_ids) { is_expected.to include(*expected_arena_ids) }
+  its(:trait_ids) { is_expected.to include(*expected_trait_ids) }
+  its(:keyword_ids) { is_expected.to include(*expected_keyword_ids) }
   its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:SOR-en-252") }
 end
