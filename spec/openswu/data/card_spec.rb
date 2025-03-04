@@ -28,9 +28,19 @@ RSpec.describe OpenSWU::Data::Card do
       upgrade_power: nil,
       rarity_id: OpenSWU::Data.uuid("rarity", "Common", "en"),
       front_type_id: OpenSWU::Data.uuid("type", "Leader", "en"),
-      back_type_id: OpenSWU::Data.uuid("type", "Leader Unit", "en")
+      back_type_id: OpenSWU::Data.uuid("type", "Leader Unit", "en"),
+      aspect_ids: [
+        OpenSWU::Data.uuid("aspect", "Vigilance", "en"),
+        OpenSWU::Data.uuid("aspect", "Heroism", "en")
+      ]
     }
   }
+  let(:expected_aspect_ids) do
+    [
+      Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "aspect:Vigilance-en"),
+      Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "aspect:Heroism-en")
+    ]
+  end
 
   its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "card:SOR-en-5-252") }
   its(:title) { is_expected.to eq valid_attributes[:title] }
@@ -57,5 +67,6 @@ RSpec.describe OpenSWU::Data::Card do
   its(:rarity_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "rarity:Common-en") }
   its(:front_type_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "type:Leader-en") }
   its(:back_type_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "type:Leader Unit-en") }
+  its(:aspect_ids) { is_expected.to include(*expected_aspect_ids) }
   its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:SOR-en-252") }
 end

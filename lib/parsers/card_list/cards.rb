@@ -37,8 +37,17 @@ module Parsers
           upgrade_power: json["attributes"]["upgradePower"],
           rarity_id: parse_rarity_id(json["attributes"]["rarity"]["data"]["attributes"]),
           front_type_id: parse_type_id(json["attributes"]["type"]["data"]["attributes"]),
-          back_type_id: parse_type_id(json["attributes"]["type2"]["data"]&.[]("attributes"))
+          back_type_id: parse_type_id(json["attributes"]["type2"]["data"]&.[]("attributes")),
+          aspect_ids: parse_aspect_ids(json["attributes"]["aspects"]["data"], json["attributes"]["aspectDuplicates"]["data"])
         )
+      end
+
+      def parse_aspect_ids(primary_aspects, duplicate_aspects)
+        primary_aspects.collect { |aspect|
+          ::OpenSWU::Data.uuid("aspect", aspect["attributes"]["name"], aspect["attributes"]["locale"])
+        }.concat(duplicate_aspects.collect { |aspect|
+          ::OpenSWU::Data.uuid("aspect", aspect["attributes"]["name"], aspect["attributes"]["locale"])
+        })
       end
 
       def parse_rarity_id(json)
