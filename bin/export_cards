@@ -26,13 +26,14 @@ puts "\n#{parser.size} Cards to Export"
 # Write to CSV
 CSV.open(export_file, "wb") do |csv|
   csv << %w[id swu_card_id title subtitle card_number locale artist expansion_id front_art_url back_art_url has_foil
-            hyperspace showcase play_cost base_hp base_power unique upgrade_hp upgrade_power rarity_id]
+            hyperspace showcase play_cost base_hp base_power unique upgrade_hp upgrade_power rarity_id front_type_id
+            back_type_id]
   parser.each do |card|
     csv << [card.id, card.card_id, card.title, card.subtitle, card.card_number, card.locale, card.artist,
             card.expansion_id, card.front_art_url, card.front_art_horizontal, card.back_art_url,
             card.back_art_horizontal, card.has_foil_printing, card.hyperspace_printing, card.showcase_printing,
             card.play_cost, card.base_hp, card.base_power, card.unique, card.upgrade_hp, card.upgrade_power,
-            card.rarity_id]
+            card.rarity_id, card.front_type_id, card.back_type_id]
   end
 end
 

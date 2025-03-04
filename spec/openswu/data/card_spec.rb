@@ -26,7 +26,9 @@ RSpec.describe OpenSWU::Data::Card do
       unique: true,
       upgrade_hp: nil,
       upgrade_power: nil,
-      rarity_id: OpenSWU::Data.uuid("rarity", "Common", "en")
+      rarity_id: OpenSWU::Data.uuid("rarity", "Common", "en"),
+      front_type_id: OpenSWU::Data.uuid("type", "Leader", "en"),
+      back_type_id: OpenSWU::Data.uuid("type", "Leader Unit", "en")
     }
   }
 
@@ -53,5 +55,7 @@ RSpec.describe OpenSWU::Data::Card do
   its(:upgrade_hp) { is_expected.to eq valid_attributes[:upgrade_hp] }
   its(:upgrade_power) { is_expected.to eq valid_attributes[:upgrade_power] }
   its(:rarity_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "rarity:Common-en") }
+  its(:front_type_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "type:Leader-en") }
+  its(:back_type_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "type:Leader Unit-en") }
   its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:SOR-en-252") }
 end

@@ -35,12 +35,20 @@ module Parsers
           unique: json["attributes"]["unique"],
           upgrade_hp: json["attributes"]["upgradeHp"],
           upgrade_power: json["attributes"]["upgradePower"],
-          rarity_id: parse_rarity_id(json["attributes"]["rarity"]["data"]["attributes"])
+          rarity_id: parse_rarity_id(json["attributes"]["rarity"]["data"]["attributes"]),
+          front_type_id: parse_type_id(json["attributes"]["type"]["data"]["attributes"]),
+          back_type_id: parse_type_id(json["attributes"]["type2"]["data"]&.[]("attributes"))
         )
       end
 
       def parse_rarity_id(json)
         ::OpenSWU::Data.uuid("rarity", json["name"], json["locale"])
+      end
+
+      def parse_type_id(json = nil)
+        return if json.nil?
+
+        ::OpenSWU::Data.uuid("type", json["name"], json["locale"])
       end
     end
   end
