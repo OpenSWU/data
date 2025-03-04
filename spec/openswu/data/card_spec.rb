@@ -32,6 +32,9 @@ RSpec.describe OpenSWU::Data::Card do
       aspect_ids: [
         OpenSWU::Data.uuid("aspect", "Vigilance", "en"),
         OpenSWU::Data.uuid("aspect", "Heroism", "en")
+      ],
+      arena_ids: [
+        OpenSWU::Data.uuid("arena", "Ground", "en")
       ]
     }
   }
@@ -41,6 +44,7 @@ RSpec.describe OpenSWU::Data::Card do
       Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "aspect:Heroism-en")
     ]
   end
+  let(:expected_arena_ids) { [Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "arena:Ground-en")] }
 
   its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "card:SOR-en-5-252") }
   its(:title) { is_expected.to eq valid_attributes[:title] }
@@ -68,5 +72,6 @@ RSpec.describe OpenSWU::Data::Card do
   its(:front_type_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "type:Leader-en") }
   its(:back_type_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "type:Leader Unit-en") }
   its(:aspect_ids) { is_expected.to include(*expected_aspect_ids) }
+  its(:arena_ids) { is_expected.to include(*expected_arena_ids) }
   its(:expansion_id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "expansion:SOR-en-252") }
 end

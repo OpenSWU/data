@@ -33,7 +33,7 @@ CSV.open(export_file, "wb") do |csv|
             card.expansion_id, card.front_art_url, card.front_art_horizontal, card.back_art_url,
             card.back_art_horizontal, card.has_foil_printing, card.hyperspace_printing, card.showcase_printing,
             card.play_cost, card.base_hp, card.base_power, card.unique, card.upgrade_hp, card.upgrade_power,
-            card.rarity_id, card.front_type_id, card.back_type_id, card.aspect_ids.join(";")]
+            card.rarity_id, card.front_type_id, card.back_type_id, card.aspect_ids.join(";"), card.arena_ids.join(";")]
   end
 end
 

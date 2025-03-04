@@ -38,8 +38,15 @@ module Parsers
           rarity_id: parse_rarity_id(json["attributes"]["rarity"]["data"]["attributes"]),
           front_type_id: parse_type_id(json["attributes"]["type"]["data"]["attributes"]),
           back_type_id: parse_type_id(json["attributes"]["type2"]["data"]&.[]("attributes")),
-          aspect_ids: parse_aspect_ids(json["attributes"]["aspects"]["data"], json["attributes"]["aspectDuplicates"]["data"])
+          aspect_ids: parse_aspect_ids(json["attributes"]["aspects"]["data"], json["attributes"]["aspectDuplicates"]["data"]),
+          arena_ids: parse_arena_ids(json["attributes"]["arenas"]["data"])
         )
+      end
+
+      def parse_arena_ids(json)
+        json.collect do |arena|
+          ::OpenSWU::Data.uuid("arena", arena["attributes"]["name"], arena["attributes"]["locale"])
+        end
       end
 
       def parse_aspect_ids(primary_aspects, duplicate_aspects)
