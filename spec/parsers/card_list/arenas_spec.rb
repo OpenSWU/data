@@ -29,7 +29,7 @@ RSpec.describe Parsers::CardList::Arenas do
   describe "#each" do
     subject(:parser) { described_class.load_cache cache_dir }
 
-    it "returns each card as a Expansion" do
+    it "returns each card as a Arena" do
       expect(parser).to all(be_a OpenSWU::Data::Arena)
     end
   end
