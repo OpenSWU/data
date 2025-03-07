@@ -6,6 +6,7 @@ SimpleCov.start do
   add_filter "/spec/"
   add_filter "/bin/"
 
+  add_group "Exporters", "lib/exporters"
   add_group "Parsers", "lib/parsers"
   add_group "Scrapers", "lib/scrapers"
 end

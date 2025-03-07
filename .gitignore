@@ -1,3 +1,6 @@
 spec/examples.txt
 /tmp/
+!tmp/cache/.keep
+!tmp/exports/.keep
+!tmp/tests/.keep
 /coverage/
