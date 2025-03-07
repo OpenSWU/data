@@ -6,29 +6,12 @@ $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 require "rubygems"
 require "bundler/setup"
 
-require "csv"
-require "parsers/card_list/aspects"
-
-cache_dir = "tmp/cache/openswu-data/"
-export_dir = "tmp/exports/"
-export_file = "#{export_dir}aspects.csv"
-
-# Ensure the export directory exists
-Dir.mkdir(export_dir) unless Dir.exist?(export_dir)
-
-parser = Parsers::CardList::Aspects.load_cache(cache_dir)
+require "exporters/aspects"
 
 puts "=" * 80
 puts "  OpenSWU Data — Export Aspects"
 puts "=" * 80
-puts "\n#{parser.count} Aspects to Export"
 
-# Write to CSV
-CSV.open(export_file, "wb") do |csv|
-  csv << %w[id name description color locale english_name]
-  parser.each do |aspect|
-    csv << [aspect.id, aspect.name, aspect.description, aspect.color, aspect.locale, aspect.english_name]
-  end
-end
+Exporters::Aspects.new("tmp/cache/openswu-data/", "tmp/exports")
 
-puts "\nAspects exported to #{export_file}"
+puts "\nAspects exported!"
