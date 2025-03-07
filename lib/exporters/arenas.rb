@@ -1,24 +1,29 @@
 require "csv"
 require "fileutils"
+require "exporters/base"
 require "parsers/card_list/arenas"
 
 module Exporters
-  class Arenas
-    def initialize(cache_dir, export_dir)
-      @parser = Parsers::CardList::Arenas.load_cache(cache_dir)
-      @export_dir = export_dir
-      @export_target = "#{export_dir}/arenas.csv"
-    end
-
+  class Arenas < Base
     def export!
-      FileUtils.mkdir_p(@export_dir) unless Dir.exist?(@export_dir)
+      FileUtils.mkdir_p(export_dir) unless Dir.exist?(export_dir)
 
-      CSV.open(@export_target, "wb") do |csv|
+      CSV.open(export_target, "wb") do |csv|
         csv << %w[id name description locale]
-        @parser.each do |arena|
+        parser.each do |arena|
           csv << [arena.id, arena.name, arena.description, arena.locale]
         end
       end
+    end
+
+    private
+
+    def export_filename
+      "arenas.csv"
+    end
+
+    def parser_klass
+      Parsers::CardList::Arenas
     end
   end
 end

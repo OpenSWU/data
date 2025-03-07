@@ -1,24 +1,29 @@
 require "csv"
 require "fileutils"
+require "exporters/base"
 require "parsers/card_list/aspects"
 
 module Exporters
-  class Aspects
-    def initialize(cache_dir, export_dir)
-      @parser = Parsers::CardList::Aspects.load_cache(cache_dir)
-      @export_dir = export_dir
-      @export_target = "#{export_dir}/aspects.csv"
-    end
-
+  class Aspects < Base
     def export!
-      FileUtils.mkdir_p(@export_dir) unless Dir.exist?(@export_dir)
+      FileUtils.mkdir_p(export_dir) unless Dir.exist?(export_dir)
 
-      CSV.open(@export_target, "wb") do |csv|
+      CSV.open(export_target, "wb") do |csv|
         csv << %w[id name description color locale english_name]
-        @parser.each do |aspect|
+        parser.each do |aspect|
           csv << [aspect.id, aspect.name, aspect.description, aspect.color, aspect.locale, aspect.english_name]
         end
       end
+    end
+
+    private
+
+    def export_filename
+      "aspects.csv"
+    end
+
+    def parser_klass
+      Parsers::CardList::Aspects
     end
   end
 end
