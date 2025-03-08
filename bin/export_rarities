@@ -6,29 +6,12 @@ $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 require "rubygems"
 require "bundler/setup"
 
-require "csv"
-require "parsers/card_list/rarities"
-
-cache_dir = "tmp/cache/openswu-data/"
-export_dir = "tmp/exports/"
-export_file = "#{export_dir}rarities.csv"
-
-# Ensure the export directory exists
-Dir.mkdir(export_dir) unless Dir.exist?(export_dir)
-
-parser = Parsers::CardList::Rarities.load_cache(cache_dir)
+require "exporters/rarities"
 
 puts "=" * 80
 puts "  OpenSWU Data — Export Rarities"
 puts "=" * 80
-puts "\n#{parser.count} Rarities to Export"
 
-# Write to CSV
-CSV.open(export_file, "wb") do |csv|
-  csv << %w[id name character color locale english_name]
-  parser.each do |trait|
-    csv << [trait.id, trait.name, trait.character, trait.color, trait.locale, trait.english_name]
-  end
-end
+Exporters::Rarities.new("tmp/cache/openswu-data/", "tmp/exports")
 
-puts "\nRarities exported to #{export_file}"
+puts "\nRarities exported!"
