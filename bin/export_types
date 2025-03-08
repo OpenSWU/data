@@ -7,28 +7,12 @@ require "rubygems"
 require "bundler/setup"
 
 require "csv"
-require "parsers/card_list/types"
-
-cache_dir = "tmp/cache/openswu-data/"
-export_dir = "tmp/exports/"
-export_file = "#{export_dir}types.csv"
-
-# Ensure the export directory exists
-Dir.mkdir(export_dir) unless Dir.exist?(export_dir)
-
-parser = Parsers::CardList::Types.load_cache(cache_dir)
+require "exporters/types"
 
 puts "=" * 80
 puts "  OpenSWU Data — Export Types"
 puts "=" * 80
-puts "\n#{parser.count} Types to Export"
 
-# Write to CSV
-CSV.open(export_file, "wb") do |csv|
-  csv << %w[id name description value locale]
-  parser.each do |trait|
-    csv << [trait.id, trait.name, trait.description, trait.value, trait.locale]
-  end
-end
+Exporters::Types.new("tmp/cache/openswu-data/", "tmp/exports")
 
-puts "\nTypes exported to #{export_file}"
+puts "\nTypes exported!"
