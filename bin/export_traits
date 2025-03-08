@@ -6,29 +6,12 @@ $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 require "rubygems"
 require "bundler/setup"
 
-require "csv"
-require "parsers/card_list/traits"
-
-cache_dir = "tmp/cache/openswu-data/"
-export_dir = "tmp/exports/"
-export_file = "#{export_dir}traits.csv"
-
-# Ensure the export directory exists
-Dir.mkdir(export_dir) unless Dir.exist?(export_dir)
-
-parser = Parsers::CardList::Traits.load_cache(cache_dir)
+require "exporters/traits"
 
 puts "=" * 80
 puts "  OpenSWU Data — Export Traits"
 puts "=" * 80
-puts "\n#{parser.count} Traits to Export"
 
-# Write to CSV
-CSV.open(export_file, "wb") do |csv|
-  csv << %w[id name description locale]
-  parser.each do |trait|
-    csv << [trait.id, trait.name, trait.description, trait.locale]
-  end
-end
+Exporters::Traits.new("tmp/cache/openswu-data/", "tmp/exports")
 
-puts "\nTraits exported to #{export_file}"
+puts "\nTraits exported!"
