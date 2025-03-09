@@ -8,6 +8,22 @@ module OpenSWU
         Data.uuid("card", expansion_code, locale, card_number, card_count)
       end
 
+      def csv_aspect_ids
+        aspect_ids.join(";")
+      end
+
+      def csv_arena_ids
+        arena_ids.join(";")
+      end
+
+      def csv_trait_ids
+        trait_ids.join(";")
+      end
+
+      def csv_keyword_ids
+        keyword_ids.join(";")
+      end
+
       def expansion_id
         Data.uuid("expansion", expansion_code, locale, card_count)
       end

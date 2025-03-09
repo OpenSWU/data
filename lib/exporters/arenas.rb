@@ -11,12 +11,12 @@ module Exporters
       %w[id name description locale]
     end
 
-    def headers
-      %w[id name description locale]
-    end
-
     def export_filename
       "arenas.csv"
+    end
+
+    def headers
+      %w[id name description locale]
     end
 
     def parser_klass
