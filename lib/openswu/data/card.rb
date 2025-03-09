@@ -5,7 +5,7 @@ module OpenSWU
       :hyperspace_printing, :showcase_printing, :play_cost, :base_hp, :base_power, :unique, :upgrade_hp,
       :upgrade_power, :rarity_id, :front_type_id, :back_type_id, :aspect_ids, :arena_ids, :trait_ids, :keyword_ids)
       def id
-        Data.uuid("card", expansion_code, locale, card_number, card_count)
+        Data.uuid("card", expansion_id, locale, card_id, card_number)
       end
 
       def csv_aspect_ids

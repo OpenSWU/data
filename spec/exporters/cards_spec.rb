@@ -47,7 +47,7 @@ RSpec.describe Exporters::Cards do
       end
 
       it "contains the expected records" do
-        expected_row = ["ae40966f-8284-5c1a-af54-23512e08b126", "0011262813", "Wedge Antilles", "Leader of Red Squadron",
+        expected_row = ["e18d7a0f-7b86-5dca-88ed-ba9c89b8b60b", "0011262813", "Wedge Antilles", "Leader of Red Squadron",
           "8", "en", "David Buisan", "b026ab8b-a973-5327-adaf-75353683a9a6",
           "https://cdn.starwarsunlimited.com//04010008_EN_Wedge_Antilles_Leader_1f73212484.png", "true",
           "https://cdn.starwarsunlimited.com//04010008_EN_Wedge_Antilles_Leader_Unit_6414788e89.png", "false", "true",

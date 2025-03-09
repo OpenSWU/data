@@ -54,7 +54,7 @@ RSpec.describe OpenSWU::Data::Card do
   let(:expected_trait_ids) { [Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "trait:Rebel-en")] }
   let(:expected_keyword_ids) { [Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "keyword:Sentinel-en")] }
 
-  its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "card:SOR-en-5-252") }
+  its(:id) { is_expected.to eq Digest::UUID.uuid_v5(OpenSWU::V5_UUID, "card:#{card.expansion_id}-en-2579145458-5") }
   its(:title) { is_expected.to eq valid_attributes[:title] }
   its(:subtitle) { is_expected.to eq valid_attributes[:subtitle] }
   its(:card_number) { is_expected.to eq valid_attributes[:card_number] }
