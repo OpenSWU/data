@@ -73,15 +73,6 @@ create table rarities
 create unique index rarities_name_locale_index
     on rarities (name desc, locale desc);
 
-create table sqlite_master
-(
-    type     TEXT,
-    name     TEXT,
-    tbl_name TEXT,
-    rootpage INT,
-    sql      TEXT
-);
-
 create table traits
 (
     id          string          not null
@@ -150,7 +141,71 @@ create index cards_expansion_id_rarity_id_index
 create index cards_locale_index
     on cards (locale desc);
 
+create table cards_arenas
+(
+    arena_id string not null
+        constraint cards_arenas_arenas_id_fk
+            references arenas,
+    card_id  string not null
+        constraint cards_arenas_cards_id_fk
+            references cards
+);
+
+create index cards_arenas_card_id_arena_id_index
+    on cards_arenas (card_id, arena_id);
+
+create table cards_aspects
+(
+    aspect_id string not null
+        constraint cards_aspects_aspects_id_fk
+            references aspects,
+    card_id   string not null
+        constraint cards_aspects_cards_id_fk
+            references cards
+);
+
+create index cards_aspects_card_id_aspect_id_index
+    on cards_aspects (card_id, aspect_id);
+
+create table cards_keywords
+(
+    card_id    string not null
+        constraint cards_keywords_cards_id_fk
+            references cards,
+    keyword_id string not null
+        constraint cards_keywords_keywords_id_fk
+            references keywords
+);
+
+create index cards_keywords_card_id_keyword_id_index
+    on cards_keywords (card_id, keyword_id);
+
+create table cards_traits
+(
+    card_id  string not null
+        constraint cards_traits_cards_id_fk
+            references cards,
+    trait_id string not null
+        constraint cards_traits_traits_id_fk
+            references traits
+);
+
+create index cards_traits_card_id_trait_id_index
+    on cards_traits (card_id, trait_id);
+
+create table cards_types
+(
+    card_id string not null
+        constraint cards_types_cards_id_fk
+            references cards,
+    type_id string not null
+        constraint cards_types_types_id_fk
+            references types
+);
+
+create index cards_types_card_id_type_id_index
+    on cards_types (card_id, type_id);
+
 create index types_name_locale_index
     on types (name desc, locale desc);
-
 
