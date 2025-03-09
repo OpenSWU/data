@@ -23,12 +23,20 @@ module Exporters
 
     attr_reader :parser, :export_dir, :export_target
 
-    def parser_klass
-      raise NoMethodError, "define `parser_klass` for #{self.class}"
+    def attr_names
+      raise NoMethodError, "define `attr_names` for #{self.class}"
     end
 
     def export_filename
       raise NoMethodError, "define `export_filename` for #{self.class}"
+    end
+
+    def headers
+      raise NoMethodError, "define `headers` for #{self.class}"
+    end
+
+    def parser_klass
+      raise NoMethodError, "define `parser_klass` for #{self.class}"
     end
   end
 end
