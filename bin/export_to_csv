@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+libdir = File.expand_path(File.dirname(__FILE__) + '/../lib')
+$LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
+
+require "rubygems"
+require "bundler/setup"
+
+require "exporters/arenas"
+require "exporters/aspects"
+require "exporters/cards"
+require "exporters/expansions"
+require "exporters/keywords"
+require "exporters/rarities"
+require "exporters/traits"
+require "exporters/types"
+
+puts "=" * 80
+puts "  OpenSWU Data — Exporting to CSV"
+puts "=" * 80
+
+cache_dir = "tmp/cache/openswu-data/"
+export_dir = "tmp/exports"
+
+puts "Exporting Arenas..."
+Exporters::Arenas.new(cache_dir, export_dir).export!
+
+puts "Exporting Aspects..."
+Exporters::Aspects.new(cache_dir, export_dir).export!
+
+puts "Exporting Cards..."
+Exporters::Cards.new(cache_dir, export_dir).export!
+
+puts "Exporting Expansions..."
+Exporters::Expansions.new(cache_dir, export_dir).export!
+
+puts "Exporting Keywords..."
+Exporters::Keywords.new(cache_dir, export_dir).export!
+
+puts "Exporting Rarities..."
+Exporters::Rarities.new(cache_dir, export_dir).export!
+
+puts "Exporting Traits..."
+Exporters::Traits.new(cache_dir, export_dir).export!
+
+puts "Exporting Types..."
+Exporters::Types.new(cache_dir, export_dir).export!
+
+puts "=" * 80
+puts "\nExport Complete!"
