@@ -6,6 +6,19 @@ module Exporters
       @export_target = "#{export_dir}/#{export_filename}"
     end
 
+    def export!
+      FileUtils.mkdir_p(export_dir) unless Dir.exist?(export_dir)
+
+      CSV.open(export_target, "wb") do |csv|
+        csv << headers
+        parser.each do |datum|
+          csv << attr_names.collect do |attr|
+            datum.send(attr)
+          end
+        end
+      end
+    end
+
     private
 
     attr_reader :parser, :export_dir, :export_target
