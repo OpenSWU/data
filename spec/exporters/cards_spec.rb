@@ -19,6 +19,18 @@ RSpec.describe Exporters::Cards do
       }.from(false).to(true)
     end
 
+    context "when the export directory already exists" do
+      before do
+        FileUtils.mkdir_p(export_dir)
+      end
+
+      it "exports as expected" do
+        expect { exporter.export! }.to change {
+          File.exist?(export_dir + "/cards.csv")
+        }.from(false).to(true)
+      end
+    end
+
     describe "the exporterd cards.csv file" do
       let(:headers) { CSV.open(csv_path, &:readline) }
       let(:table) { CSV.read(csv_path, headers: true) }
