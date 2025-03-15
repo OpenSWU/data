@@ -56,8 +56,8 @@ cards_file = "tmp/exports/cards.csv"
 csv_reader = CSV.read(cards_file, headers:true)
 progress_bar = ProgressBar.new(csv_reader.size)
 csv_reader.each_slice(100) do |rows|
-  columns ||= rows.first.headers.reject { |header| excluded_headers.include?(header) }.collect {|value| "'#{value}'" }.join(", ")
   excluded_headers = %w[aspect_ids arena_ids trait_ids keyword_ids]
+  columns ||= rows.first.headers.reject { |header| excluded_headers.include?(header) }.collect {|value| "'#{value}'" }.join(", ")
   placeholders = []
   values = []
 
@@ -74,28 +74,12 @@ progress_bar = ProgressBar.new(csv_reader.size)
 csv_reader.each do |row|
   card_id = row["id"]
 
-  row["arena_ids"].split(";").each do |arena_id|
-    db.execute <<-SQL
-      INSERT INTO cards_arenas(arena_id, card_id) VALUES ('#{arena_id}', '#{card_id}')
-    SQL
-  end
-
-  row["aspect_ids"].split(";").each do |aspect_id|
-    db.execute <<-SQL
-      INSERT INTO cards_aspects(aspect_id, card_id) VALUES ('#{aspect_id}', '#{card_id}')
-    SQL
-  end
-
-  row["keyword_ids"].split(";").each do |keyword_id|
-    db.execute <<-SQL
-      INSERT INTO cards_keywords(keyword_id, card_id) VALUES ('#{keyword_id}', '#{card_id}')
-    SQL
-  end
-
-  row["trait_ids"].split(";").each do |trait_id|
-    db.execute <<-SQL
-      INSERT INTO cards_traits(trait_id, card_id) VALUES ('#{trait_id}', '#{card_id}')
-    SQL
+  %w[arena aspect keyword trait].each do |association|
+    row["#{association}_ids"].split(";").each do |id|
+      db.execute <<-SQL
+        INSERT INTO cards_#{association}s(#{association}_id, card_id) VALUES ('#{id}', '#{card_id}')
+      SQL
+    end
   end
 
   progress_bar.increment!
