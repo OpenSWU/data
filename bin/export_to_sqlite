@@ -19,6 +19,17 @@ FileUtils.rm_f(db_file) if File.exist?(db_file)
 db = SQLite3::Database.new db_file
 db.execute_batch File.read(schema_file)
 
+def process_csv_row(placeholders, progress_bar, row, values, excluded_headers = [])
+  placeholders << "(#{(['?'] * (row.headers.size - excluded_headers.size)).join(', ')})"
+  values << row.headers.reject { |header| excluded_headers.include?(header) }.collect {|header| row[header] }
+  progress_bar.increment!
+end
+
+def insert_to_db(columns, data_set, db, placeholders, values)
+  sql = "INSERT INTO #{data_set}(#{columns}) VALUES #{placeholders.join(', ')}"
+  db.execute(sql, values.flatten)
+end
+
 %w[arenas aspects expansions keywords rarities traits types].each do |data_set|
   puts
   puts "Exporting #{data_set}..."
@@ -27,19 +38,15 @@ db.execute_batch File.read(schema_file)
   csv_reader = CSV.read(target_file, headers:true)
   progress_bar = ProgressBar.new(csv_reader.size)
   csv_reader.each_slice(100) do |rows|
-    columns = nil
+    columns ||= rows.first.headers.collect { |value| "'#{value}'" }.join(", ")
     placeholders = []
     values = []
 
     rows.each do |row|
-      columns ||= row.headers.collect {|value| "'#{value}'" }.join(", ")
-      placeholders << "(#{(['?'] * row.headers.size).join(', ')})"
-      values << row.headers.collect {|header| row[header] }
-      progress_bar.increment!
+      process_csv_row(placeholders, progress_bar, row, values)
     end
 
-    sql = "INSERT INTO #{data_set}(#{columns}) VALUES #{placeholders.join(', ')}"
-    db.execute(sql, values.flatten)
+    insert_to_db(columns, data_set, db, placeholders, values)
   end
 end
 
@@ -49,20 +56,16 @@ cards_file = "tmp/exports/cards.csv"
 csv_reader = CSV.read(cards_file, headers:true)
 progress_bar = ProgressBar.new(csv_reader.size)
 csv_reader.each_slice(100) do |rows|
+  columns ||= rows.first.headers.reject { |header| excluded_headers.include?(header) }.collect {|value| "'#{value}'" }.join(", ")
   excluded_headers = %w[aspect_ids arena_ids trait_ids keyword_ids]
-  columns = nil
   placeholders = []
   values = []
 
   rows.each do |row|
-    columns ||= row.headers.reject { |header| excluded_headers.include?(header) }.collect {|value| "'#{value}'" }.join(", ")
-    placeholders << "(#{(['?'] * (row.headers.size - excluded_headers.size)).join(', ')})"
-    values << row.headers.reject { |header| excluded_headers.include?(header) }.collect {|header| row[header] }
-    progress_bar.increment!
+    process_csv_row(placeholders, progress_bar, row, values, excluded_headers)
   end
 
-  sql = "INSERT INTO cards(#{columns}) VALUES #{placeholders.join(', ')}"
-  db.execute(sql, values.flatten)
+  insert_to_db(columns, "cards", db, placeholders, values)
 end
 
 puts
