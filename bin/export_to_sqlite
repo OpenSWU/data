@@ -1,0 +1,103 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+libdir = File.expand_path(File.dirname(__FILE__) + '/../lib')
+$LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
+
+require "rubygems"
+require "bundler/setup"
+
+require "csv"
+require "fileutils"
+require "progress_bar"
+require "sqlite3"
+
+db_file = "tmp/exports/openswu.sqlite"
+schema_file = "schemas/sqlite.sql"
+
+FileUtils.rm_f(db_file) if File.exist?(db_file)
+
+db = SQLite3::Database.new db_file
+db.execute_batch File.read(schema_file)
+
+%w[arenas aspects expansions keywords rarities traits types].each do |data_set|
+  puts
+  puts "Exporting #{data_set}..."
+  target_file = "tmp/exports/#{data_set}.csv"
+
+  csv_reader = CSV.read(target_file, headers:true)
+  progress_bar = ProgressBar.new(csv_reader.size)
+  csv_reader.each_slice(100) do |rows|
+    columns = nil
+    placeholders = []
+    values = []
+
+    rows.each do |row|
+      columns ||= row.headers.collect {|value| "'#{value}'" }.join(", ")
+      placeholders << "(#{(['?'] * row.headers.size).join(', ')})"
+      values << row.headers.collect {|header| row[header] }
+      progress_bar.increment!
+    end
+
+    sql = "INSERT INTO #{data_set}(#{columns}) VALUES #{placeholders.join(', ')}"
+    db.execute(sql, values.flatten)
+  end
+end
+
+puts
+puts "Exporting cards..."
+cards_file = "tmp/exports/cards.csv"
+csv_reader = CSV.read(cards_file, headers:true)
+progress_bar = ProgressBar.new(csv_reader.size)
+csv_reader.each_slice(100) do |rows|
+  excluded_headers = %w[aspect_ids arena_ids trait_ids keyword_ids]
+  columns = nil
+  placeholders = []
+  values = []
+
+  rows.each do |row|
+    columns ||= row.headers.reject { |header| excluded_headers.include?(header) }.collect {|value| "'#{value}'" }.join(", ")
+    placeholders << "(#{(['?'] * (row.headers.size - excluded_headers.size)).join(', ')})"
+    values << row.headers.reject { |header| excluded_headers.include?(header) }.collect {|header| row[header] }
+    progress_bar.increment!
+  end
+
+  sql = "INSERT INTO cards(#{columns}) VALUES #{placeholders.join(', ')}"
+  db.execute(sql, values.flatten)
+end
+
+puts
+puts "Exporting card associations..."
+progress_bar = ProgressBar.new(csv_reader.size)
+csv_reader.each do |row|
+  card_id = row["id"]
+
+  row["arena_ids"].split(";").each do |arena_id|
+    db.execute <<-SQL
+      INSERT INTO cards_arenas(arena_id, card_id) VALUES ('#{arena_id}', '#{card_id}')
+    SQL
+  end
+
+  row["aspect_ids"].split(";").each do |aspect_id|
+    db.execute <<-SQL
+      INSERT INTO cards_aspects(aspect_id, card_id) VALUES ('#{aspect_id}', '#{card_id}')
+    SQL
+  end
+
+  row["keyword_ids"].split(";").each do |keyword_id|
+    db.execute <<-SQL
+      INSERT INTO cards_keywords(keyword_id, card_id) VALUES ('#{keyword_id}', '#{card_id}')
+    SQL
+  end
+
+  row["trait_ids"].split(";").each do |trait_id|
+    db.execute <<-SQL
+      INSERT INTO cards_traits(trait_id, card_id) VALUES ('#{trait_id}', '#{card_id}')
+    SQL
+  end
+
+  progress_bar.increment!
+end
+
+puts
+puts "Turning on Foreign Key constraints..."
+db.execute "PRAGMA foreign_keys = ON;"
