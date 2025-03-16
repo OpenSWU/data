@@ -9,6 +9,7 @@ gem "faraday", "~> 2.12"
 gem "irb", "~> 1.15"
 gem "oj", "~> 3.16"
 gem "progress_bar", "~> 1.3", require: false
+gem "sequel", "~> 5.0", require: false
 gem "sqlite3", "~> 2.6", require: false
 
 group :development, :test do

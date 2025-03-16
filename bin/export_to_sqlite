@@ -9,15 +9,19 @@ require "bundler/setup"
 require "csv"
 require "fileutils"
 require "progress_bar"
+require "sequel/core"
 require "sqlite3"
 
 db_file = "tmp/exports/openswu.sqlite"
-schema_file = "schemas/sqlite.sql"
 
 FileUtils.rm_f(db_file) if File.exist?(db_file)
 
+Sequel.extension :migration
+Sequel.sqlite(db_file) do |db|
+  Sequel::Migrator.run(db, "db/migrations", target: 1)
+end
+
 db = SQLite3::Database.new db_file
-db.execute_batch File.read(schema_file)
 
 def process_csv_row(placeholders, progress_bar, row, values, excluded_headers = [])
   placeholders << "(#{(['?'] * (row.headers.size - excluded_headers.size)).join(', ')})"
