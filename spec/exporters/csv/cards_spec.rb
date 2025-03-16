@@ -55,7 +55,7 @@ RSpec.describe Exporters::CSV::Cards do
           "3c5da669-cd53-548a-ab3c-2db0483f6c38", "be6c5e23-8df3-5720-bb58-76de7be747b6",
           "dcdb0597-ecf8-5f45-9595-72f9f3660e6a;40ffce8a-e036-52a9-b497-0c1c484a8a06",
           "01bb6d4b-3455-5dc1-a62e-855d6e4465d1",
-          "dc9f18f3-72c8-5622-b91c-8a95823f505b;b4f4b731-c6bf-5ad3-bffa-a38143874127",
+          "a7a43365-14d5-5923-be5d-487dc6ad500a;b5ab6870-ddcd-5eb4-84c7-d1557a07d185",
           "7d84ab0a-b29d-50b0-8520-0b68d9afffb6"]
 
         expect(table.size).to eq 3

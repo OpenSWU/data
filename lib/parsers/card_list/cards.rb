@@ -71,7 +71,7 @@ module Parsers
 
       def parse_trait_ids(json)
         json.collect do |trait|
-          ::OpenSWU::Data.uuid("arena", trait["attributes"]["name"], trait["attributes"]["locale"])
+          ::OpenSWU::Data.uuid("trait", trait["attributes"]["name"], trait["attributes"]["locale"])
         end
       end
 
