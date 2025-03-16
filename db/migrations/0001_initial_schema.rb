@@ -101,26 +101,26 @@ Sequel.migration do
     end
 
     create_table :cards_arenas do
-      foreign_key :arena_id, :arenas, index: true, on_delete: :restrict, on_update: :restrict
-      foreign_key :card_id, :cards, index: true, on_delete: :restrict, on_update: :restrict
+      foreign_key :arena_id, :arenas, type: "string(36)", on_delete: :restrict, on_update: :restrict
+      foreign_key :card_id, :cards, type: "string(36)", on_delete: :restrict, on_update: :restrict
       index [:arena_id, :card_id]
     end
 
     create_table :cards_aspects do
-      foreign_key :aspect_id, :aspects, index: true, on_delete: :restrict, on_update: :restrict
-      foreign_key :card_id, :cards, index: true, on_delete: :restrict, on_update: :restrict
+      foreign_key :aspect_id, :aspects, type: "string(36)", on_delete: :restrict, on_update: :restrict
+      foreign_key :card_id, :cards, type: "string(36)", on_delete: :restrict, on_update: :restrict
       index [:aspect_id, :card_id]
     end
 
     create_table :cards_keywords do
-      foreign_key :keyword_id, :keywords, index: true, on_delete: :restrict, on_update: :restrict
-      foreign_key :card_id, :cards, index: true, on_delete: :restrict, on_update: :restrict
+      foreign_key :keyword_id, :keywords, type: "string(36)", on_delete: :restrict, on_update: :restrict
+      foreign_key :card_id, :cards, type: "string(36)", on_delete: :restrict, on_update: :restrict
       index [:card_id, :keyword_id]
     end
 
     create_table :cards_traits do
-      foreign_key :trait_id, :traits, index: true, on_delete: :restrict, on_update: :restrict
-      foreign_key :card_id, :cards, index: true, on_delete: :restrict, on_update: :restrict
+      foreign_key :trait_id, :traits, type: "string(36)", on_delete: :restrict, on_update: :restrict
+      foreign_key :card_id, :cards, type: "string(36)", on_delete: :restrict, on_update: :restrict
       index [:card_id, :trait_id]
     end
   end
