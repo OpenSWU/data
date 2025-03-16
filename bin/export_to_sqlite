@@ -20,19 +20,6 @@ Sequel.extension :migration
 DB = Sequel.sqlite(db_file)
 Sequel::Migrator.run(DB, "db/migrations", target: 1)
 
-db = SQLite3::Database.new db_file
-
-def process_csv_row(placeholders, progress_bar, row, values, excluded_headers = [])
-  placeholders << "(#{(['?'] * (row.headers.size - excluded_headers.size)).join(', ')})"
-  values << row.headers.reject { |header| excluded_headers.include?(header) }.collect {|header| row[header] }
-  progress_bar.increment!
-end
-
-def insert_to_db(columns, data_set, db, placeholders, values)
-  sql = "INSERT INTO #{data_set}(#{columns}) VALUES #{placeholders.join(', ')}"
-  db.execute(sql, values.flatten)
-end
-
 %w[arenas aspects expansions keywords rarities traits types].each do |data_set|
   puts
   puts "Exporting #{data_set}..."
@@ -51,17 +38,11 @@ puts "Exporting cards..."
 cards_file = "tmp/exports/cards.csv"
 csv_reader = CSV.read(cards_file, headers:true)
 progress_bar = ProgressBar.new(csv_reader.size)
-csv_reader.each_slice(100) do |rows|
+csv_reader.each do |row|
   excluded_headers = %w[aspect_ids arena_ids trait_ids keyword_ids]
-  columns ||= rows.first.headers.reject { |header| excluded_headers.include?(header) }.collect {|value| "'#{value}'" }.join(", ")
-  placeholders = []
-  values = []
-
-  rows.each do |row|
-    process_csv_row(placeholders, progress_bar, row, values, excluded_headers)
-  end
-
-  insert_to_db(columns, "cards", db, placeholders, values)
+  values = row.to_hash.reject { |k, _| excluded_headers.include?(k) }
+  DB.from("cards").insert(values)
+  progress_bar.increment!
 end
 
 puts
