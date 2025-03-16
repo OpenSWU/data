@@ -1,21 +1,21 @@
 require "spec_helper"
 
-require "exporters/types"
+require "exporters/csv/arenas"
 
-RSpec.describe Exporters::Types do
-  subject(:exporter) { Exporters::Types.new(cache_dir, export_dir) }
+RSpec.describe Exporters::CSV::Arenas do
+  subject(:exporter) { Exporters::CSV::Arenas.new(cache_dir, export_dir) }
   let(:cache_dir) { "spec/fixtures/cache/" }
   let(:export_dir) { "tmp/tests/exports" }
-  let(:csv_path) { File.join(export_dir, "types.csv") }
+  let(:csv_path) { File.join(export_dir, "arenas.csv") }
 
   after do
     FileUtils.rm_rf(export_dir) if Dir.exist?(export_dir)
   end
 
   describe "#export!" do
-    it "creates an types.csv file in the specified export location" do
+    it "creates an arenas.csv file in the specified export location" do
       expect { exporter.export! }.to change {
-        File.exist?(export_dir + "/types.csv")
+        File.exist?(export_dir + "/arenas.csv")
       }.from(false).to(true)
     end
 
@@ -26,12 +26,12 @@ RSpec.describe Exporters::Types do
 
       it "exports as expected" do
         expect { exporter.export! }.to change {
-          File.exist?(export_dir + "/types.csv")
+          File.exist?(export_dir + "/arenas.csv")
         }.from(false).to(true)
       end
     end
 
-    describe "the exporterd types.csv file" do
+    describe "the exporterd arenas.csv file" do
       let(:headers) { CSV.open(csv_path, &:readline) }
       let(:table) { CSV.read(csv_path, headers: true) }
 
@@ -40,12 +40,12 @@ RSpec.describe Exporters::Types do
       end
 
       it "has the correct headers" do
-        expect(headers).to eq %w[id name description value locale]
+        expect(headers).to eq %w[id name description locale]
       end
 
       it "contains the expected records" do
-        expected_row = ["3c5da669-cd53-548a-ab3c-2db0483f6c38", "Leader", "", "Leader", "en"]
-        expect(table.size).to eq 3
+        expected_row = ["01bb6d4b-3455-5dc1-a62e-855d6e4465d1", "Ground", nil, "en"]
+        expect(table.size).to eq 1
         expect(table[0]).to eq CSV::Row.new(headers, expected_row)
       end
     end

@@ -1,14 +1,14 @@
 require "spec_helper"
 
-require "exporters/base"
+require "exporters/csv/base"
 
-class TestExporter < Exporters::Base
+class TestExporter < Exporters::CSV::Base
   # No-Op to prevent failing on default behavior.
   def initialize(*args)
   end
 end
 
-RSpec.describe Exporters::Base do
+RSpec.describe Exporters::CSV::Base do
   subject(:exporter) { TestExporter.new("", "") }
 
   it "raises and error if attr_names method is undefined" do
