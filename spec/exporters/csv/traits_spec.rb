@@ -1,21 +1,21 @@
 require "spec_helper"
 
-require "exporters/aspects"
+require "exporters/csv/traits"
 
-RSpec.describe Exporters::Aspects do
-  subject(:exporter) { Exporters::Aspects.new(cache_dir, export_dir) }
+RSpec.describe Exporters::CSV::Traits do
+  subject(:exporter) { Exporters::CSV::Traits.new(cache_dir, export_dir) }
   let(:cache_dir) { "spec/fixtures/cache/" }
   let(:export_dir) { "tmp/tests/exports" }
-  let(:csv_path) { File.join(export_dir, "aspects.csv") }
+  let(:csv_path) { File.join(export_dir, "traits.csv") }
 
   after do
     FileUtils.rm_rf(export_dir) if Dir.exist?(export_dir)
   end
 
   describe "#export!" do
-    it "creates an aspects.csv file in the specified export location" do
+    it "creates an traits.csv file in the specified export location" do
       expect { exporter.export! }.to change {
-        File.exist?(export_dir + "/aspects.csv")
+        File.exist?(export_dir + "/traits.csv")
       }.from(false).to(true)
     end
 
@@ -26,12 +26,12 @@ RSpec.describe Exporters::Aspects do
 
       it "exports as expected" do
         expect { exporter.export! }.to change {
-          File.exist?(export_dir + "/aspects.csv")
+          File.exist?(export_dir + "/traits.csv")
         }.from(false).to(true)
       end
     end
 
-    describe "the exporterd aspects.csv file" do
+    describe "the exporterd traits.csv file" do
       let(:headers) { CSV.open(csv_path, &:readline) }
       let(:table) { CSV.read(csv_path, headers: true) }
 
@@ -40,13 +40,13 @@ RSpec.describe Exporters::Aspects do
       end
 
       it "has the correct headers" do
-        expect(headers).to eq %w[id name description color locale english_name]
+        expect(headers).to eq %w[id name description locale]
       end
 
       it "contains the expected records" do
-        expected_row = ["dcdb0597-ecf8-5f45-9595-72f9f3660e6a", "Command", a_string_including("Accelerate your resources"), "#0b992d", "en", "Command"]
-        expect(table.size).to eq 3
-        expect(table.to_a).to include expected_row
+        expected_row = ["a7a43365-14d5-5923-be5d-487dc6ad500a", "Rebel", "", "en"]
+        expect(table.size).to eq 5
+        expect(table[0]).to eq CSV::Row.new(headers, expected_row)
       end
     end
   end

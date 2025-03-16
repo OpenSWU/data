@@ -1,9 +1,9 @@
 require "spec_helper"
 
-require "exporters/rarities"
+require "exporters/csv/rarities"
 
-RSpec.describe Exporters::Rarities do
-  subject(:exporter) { Exporters::Rarities.new(cache_dir, export_dir) }
+RSpec.describe Exporters::CSV::Rarities do
+  subject(:exporter) { Exporters::CSV::Rarities.new(cache_dir, export_dir) }
   let(:cache_dir) { "spec/fixtures/cache/" }
   let(:export_dir) { "tmp/tests/exports" }
   let(:csv_path) { File.join(export_dir, "rarities.csv") }

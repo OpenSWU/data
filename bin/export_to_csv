@@ -6,14 +6,14 @@ $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 require "rubygems"
 require "bundler/setup"
 
-require "exporters/arenas"
-require "exporters/aspects"
-require "exporters/cards"
-require "exporters/expansions"
-require "exporters/keywords"
-require "exporters/rarities"
-require "exporters/traits"
-require "exporters/types"
+require "exporters/csv/arenas"
+require "exporters/csv/aspects"
+require "exporters/csv/cards"
+require "exporters/csv/expansions"
+require "exporters/csv/keywords"
+require "exporters/csv/rarities"
+require "exporters/csv/traits"
+require "exporters/csv/types"
 
 puts "=" * 80
 puts "  OpenSWU Data — Exporting to CSV"
@@ -23,28 +23,28 @@ cache_dir = "tmp/cache/openswu-data/"
 export_dir = "tmp/exports"
 
 puts "Exporting Arenas..."
-Exporters::Arenas.new(cache_dir, export_dir).export!
+Exporters::CSV::Arenas.new(cache_dir, export_dir).export!
 
 puts "Exporting Aspects..."
-Exporters::Aspects.new(cache_dir, export_dir).export!
+Exporters::CSV::Aspects.new(cache_dir, export_dir).export!
 
 puts "Exporting Cards..."
-Exporters::Cards.new(cache_dir, export_dir).export!
+Exporters::CSV::Cards.new(cache_dir, export_dir).export!
 
 puts "Exporting Expansions..."
-Exporters::Expansions.new(cache_dir, export_dir).export!
+Exporters::CSV::Expansions.new(cache_dir, export_dir).export!
 
 puts "Exporting Keywords..."
-Exporters::Keywords.new(cache_dir, export_dir).export!
+Exporters::CSV::Keywords.new(cache_dir, export_dir).export!
 
 puts "Exporting Rarities..."
-Exporters::Rarities.new(cache_dir, export_dir).export!
+Exporters::CSV::Rarities.new(cache_dir, export_dir).export!
 
 puts "Exporting Traits..."
-Exporters::Traits.new(cache_dir, export_dir).export!
+Exporters::CSV::Traits.new(cache_dir, export_dir).export!
 
 puts "Exporting Types..."
-Exporters::Types.new(cache_dir, export_dir).export!
+Exporters::CSV::Types.new(cache_dir, export_dir).export!
 
 puts "=" * 80
 puts "\nExport Complete!"

@@ -1,21 +1,21 @@
 require "spec_helper"
 
-require "exporters/keywords"
+require "exporters/csv/expansions"
 
-RSpec.describe Exporters::Keywords do
-  subject(:exporter) { Exporters::Keywords.new(cache_dir, export_dir) }
+RSpec.describe Exporters::CSV::Expansions do
+  subject(:exporter) { Exporters::CSV::Expansions.new(cache_dir, export_dir) }
   let(:cache_dir) { "spec/fixtures/cache/" }
   let(:export_dir) { "tmp/tests/exports" }
-  let(:csv_path) { File.join(export_dir, "keywords.csv") }
+  let(:csv_path) { File.join(export_dir, "expansions.csv") }
 
   after do
     FileUtils.rm_rf(export_dir) if Dir.exist?(export_dir)
   end
 
   describe "#export!" do
-    it "creates an arenas.csv file in the specified export location" do
+    it "creates an expansions.csv file in the specified export location" do
       expect { exporter.export! }.to change {
-        File.exist?(export_dir + "/keywords.csv")
+        File.exist?(export_dir + "/expansions.csv")
       }.from(false).to(true)
     end
 
@@ -26,12 +26,12 @@ RSpec.describe Exporters::Keywords do
 
       it "exports as expected" do
         expect { exporter.export! }.to change {
-          File.exist?(export_dir + "/keywords.csv")
+          File.exist?(export_dir + "/expansions.csv")
         }.from(false).to(true)
       end
     end
 
-    describe "the exporterd keywords.csv file" do
+    describe "the exporterd expansions.csv file" do
       let(:headers) { CSV.open(csv_path, &:readline) }
       let(:table) { CSV.read(csv_path, headers: true) }
 
@@ -40,13 +40,13 @@ RSpec.describe Exporters::Keywords do
       end
 
       it "has the correct headers" do
-        expect(headers).to eq %w[id name description locale]
+        expect(headers).to eq %w[id code name description locale card_count]
       end
 
       it "contains the expected records" do
-        expected_row = ["e7108008-bce4-5824-92d6-daa9a68fffa6", "Piloting", "", "en"]
-        expect(table.size).to eq 2
-        expect(table[0]).to eq CSV::Row.new(headers, expected_row)
+        expected_row = ["b026ab8b-a973-5327-adaf-75353683a9a6", "JTL", "Jump to Lightspeed", "", "en", "257"]
+        expect(table.size).to eq 3
+        expect(table.to_a).to include expected_row
       end
     end
   end
