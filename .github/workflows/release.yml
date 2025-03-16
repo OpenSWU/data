@@ -14,16 +14,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+
+      - name: Cache SWU JSON
+        id: cache-swu-json
+        uses: actions/cache@v4
+        with:
+          path: tmp/cache/openswu-data
+          key: ${{ runner.os }}-swu-json
+
       - name: Scrape SWU API
+        if: steps.cache-swu-json.outputs.cache-hit != 'true'
         run: bin/scrape
+
       - name: Export CSV
         run: bin/export_to_csv
+
       - name: Export SQLite
         run: bin/export_to_sqlite
+
       - name: Archive CSV artifacts
         uses: actions/upload-artifact@v4
         with:
