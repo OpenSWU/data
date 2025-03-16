@@ -61,7 +61,7 @@ module Parsers
 
       def parse_keyword_ids(json)
         json.collect do |keywords|
-          ::OpenSWU::Data.uuid("arena", keywords["attributes"]["name"], keywords["attributes"]["locale"])
+          ::OpenSWU::Data.uuid("keyword", keywords["attributes"]["name"], keywords["attributes"]["locale"])
         end
       end
 

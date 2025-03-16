@@ -56,7 +56,7 @@ RSpec.describe Exporters::CSV::Cards do
           "dcdb0597-ecf8-5f45-9595-72f9f3660e6a;40ffce8a-e036-52a9-b497-0c1c484a8a06",
           "01bb6d4b-3455-5dc1-a62e-855d6e4465d1",
           "a7a43365-14d5-5923-be5d-487dc6ad500a;b5ab6870-ddcd-5eb4-84c7-d1557a07d185",
-          "7d84ab0a-b29d-50b0-8520-0b68d9afffb6"]
+          "e7108008-bce4-5824-92d6-daa9a68fffa6"]
 
         expect(table.size).to eq 3
         expect(table[0]).to eq CSV::Row.new(headers, expected_row)
