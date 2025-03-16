@@ -78,7 +78,3 @@ csv_reader.each do |row|
 
   progress_bar.increment!
 end
-
-puts
-puts "Turning on Foreign Key constraints..."
-db.execute "PRAGMA foreign_keys = ON;"
