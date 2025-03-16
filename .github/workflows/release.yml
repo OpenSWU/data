@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Scrape SWU API
+        run: bin/scrape
+      - name: Export CSV
+        run: bin/export_to_csv
+      - name: Export SQLite
+        run: bin/export_to_sqlite
+      - name: Archive CSV artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: csv-export
+          path: |
+            tmp/exports/*.csv
+      - name: Archive SQLite artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sqlite-export
+          path: |
+            tmp/exports/*.sqlite
