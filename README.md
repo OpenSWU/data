@@ -6,6 +6,8 @@ Flight Games, for the Star Wars Unlimited card game.
 
 ## License
 
+### Software
+
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later
@@ -17,6 +19,16 @@ PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with
 this program. If not, see <https://www.gnu.org/licenses/>.
+
+### Databases (CSV, SQLite, etc.)
+
+This project's database outputs; including CSV, SQLite, and others; are made
+available under the Open Database License:
+http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual
+contents of the database are licensed under the Database Contents License:
+http://opendatacommons.org/licenses/dbcl/1.0/
+
+A full copy of the ODbL can also be found in [LICENSE.DATABASE.txt](LICENSE.DATABASE.txt).
 
 ## Using the Scraper
 
